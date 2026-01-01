@@ -7,11 +7,8 @@
     mpv
     haruna
     spotify
-    vesktop
+    discord
     libreoffice-fresh
     qbittorrent
-    anydesk
-    #teamspeak3
-    obsidian
   ];
 }
