@@ -10,8 +10,8 @@
     qbittorrent
     libreoffice-fresh
     discord
-    discord-canary
-    vesktop
+    #discord-canary
+    #vesktop
     filen-desktop
 
     # from external personal flake
