@@ -27,20 +27,43 @@
 
     # ──────── Window rules ────────
     # MPV
-    windowrulev2 = workspace 10, noinitialfocus, class:^(mpv)$
+    windowrule {
+      name = windowrule-1
+      workspace = 10
+      no_initial_focus = on
+      match:class = ^(mpv)$
+    }
 
     # All Steam UI (main window, friends list, etc.)
-    windowrulev2 = workspace 4, class:^(steam)$
+    windowrule {
+      name = windowrule-2
+      workspace = 4
+      match:class = ^(steam)$
+    }
 
     # Steam games
-    windowrulev2 = workspace 5, class:^(steam_app.*)$
+    windowrule {
+      name = windowrule-3
+      workspace = 5
+      match:class = ^(steam_app.*)$
+    }
 
     # Discord
-    windowrulev2 = workspace 3, noinitialfocus, class:^(discord*)$
+    windowrule {
+      name = windowrule-4
+      workspace = 3
+      no_initial_focus = on
+      match:class = ^(discord*)$
+    }
 
     # Firefox
-    windowrulev2 = workspace 2, class:^(firefox*)$
+    windowrule {
+      name = windowrule-5
+      workspace = 2
+      match:class = ^(firefox*)$
+    }
 
+    # ──────── Execs ────────
     #mpv:
     exec-once = sh -c 'sleep 10 && /run/current-system/sw/bin/mpv --no-input-default-bindings --no-border --video-unscaled=yes --no-keepaspect --panscan=1.0 --mute=yes rtsp://192.168.50.227:554/11'
     '';
