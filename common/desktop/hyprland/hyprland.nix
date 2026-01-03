@@ -30,10 +30,20 @@
   # ────────────────────────────── MIME Defaults ──────────────────────────────
   xdg.mime = {
     enable = true;
-
     defaultApplications = {
+      # File manager
       "inode/directory" = [ "nemo.desktop" ];
       "x-directory/normal" = [ "nemo.desktop" ];
+  
+      # Plain text
+      "text/plain" = [ "org.kde.kate.desktop" ];
+  
+      # Shell scripts
+      "application/x-shellscript" = [ "org.kde.kate.desktop" ];
+  
+      # Terminal handling (critical for Nemo)
+      "application/x-terminal-emulator" = [ "kitty.desktop" ];
+      "x-scheme-handler/terminal" = [ "kitty.desktop" ];
     };
   };
 
@@ -58,7 +68,6 @@
     cliphist 
     ydotool 
     gnome-settings-daemon
-    gsettings-desktop-schemas
     libdbusmenu-gtk3
 
     ## Wayland / Hyprland stack
