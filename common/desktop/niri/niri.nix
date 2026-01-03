@@ -27,10 +27,42 @@
   # ────────────────────────────── MIME Defaults ──────────────────────────────
   xdg.mime = {
     enable = true;
-
     defaultApplications = {
-      "inode/directory" = [ "nemo.desktop" ];
-      "x-directory/normal" = [ "nemo.desktop" ];
+      # File manager
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+      "x-directory/normal" = [ "org.gnome.Nautilus.desktop" ];
+  
+      # Text and scripts
+      "text/plain" = [ "org.kde.kate.desktop" ];
+      "application/x-shellscript" = [ "org.kde.kate.desktop" ];
+  
+      # Terminal integration (required for Nemo)
+      "application/x-terminal-emulator" = [ "kitty.desktop" ];
+      "x-scheme-handler/terminal" = [ "kitty.desktop" ];
+  
+      # Images
+      "image/png" = [ "org.kde.gwenview.desktop" ];
+      "image/jpeg" = [ "org.kde.gwenview.desktop" ];
+      "image/webp" = [ "org.kde.gwenview.desktop" ];
+      "image/gif" = [ "org.kde.gwenview.desktop" ];
+      "image/svg+xml" = [ "org.kde.gwenview.desktop" ];
+      "image/*" = [ "org.kde.gwenview.desktop" ];
+  
+      # Video
+      "video/mp4" = [ "org.kde.haruna.desktop" ];
+      "video/x-matroska" = [ "org.kde.haruna.desktop" ];
+      "video/webm" = [ "org.kde.haruna.desktop" ];
+      "video/quicktime" = [ "org.kde.haruna.desktop" ];
+      "video/*" = [ "org.kde.haruna.desktop" ];
+  
+      # Audio
+      "audio/mpeg" = [ "org.kde.haruna.desktop" ];
+      "audio/flac" = [ "org.kde.haruna.desktop" ];
+      "audio/ogg" = [ "org.kde.haruna.desktop" ];
+      "audio/wav" = [ "org.kde.haruna.desktop" ];
+      "audio/x-m4a" = [ "org.kde.haruna.desktop" ];
+      "audio/aac" = [ "org.kde.haruna.desktop" ];
+      "audio/*" = [ "org.kde.haruna.desktop" ];
     };
   };
   
@@ -67,12 +99,8 @@
     blueman
 
     ## File management / Desktop
-    nemo-with-extensions
-    gnome-disk-utility           
-    gnome-system-monitor        
-    kdePackages.systemsettings
-    kdePackages.plasma-systemmonitor
-    kdePackages.plasma-workspace # needed for xembedsniproxy
+    gnome-disk-utility
+    nautilus
   ];
 
   # ────────────────────────────── Fonts ────────────────────────────── 
