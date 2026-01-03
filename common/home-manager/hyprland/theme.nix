@@ -58,9 +58,11 @@
       name = "adwaita-dark";
       package = pkgs.adwaita-qt;
     };
-    kdeglobals = {
-      General = {
-        ColorScheme = "BreezeDark";
+    kde.settings = {
+      kdeglobals = {
+        General = {
+          ColorScheme = "BreezeDark";
+        };
       };
     };
   };
