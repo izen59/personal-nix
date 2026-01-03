@@ -26,15 +26,14 @@
 
       #### Environment
       env = [
+        "XDG_COLOR_SCHEME,prefer-dark"
+      
+        "GTK_THEME,adw-gtk3-dark"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
+      
         "XCURSOR_THEME,Bibata-Modern-Classic"
         "HYPRCURSOR_THEME,Bibata-Modern-Classic"
-        "QT_CURSOR_THEME,Bibata-Modern-Classic"
-        "GTK_CURSOR_THEME,Bibata-Modern-Classic"
-        "GTK_THEME,adw-gtk3-dark"
-
-        "CLUTTER_BACKEND,wayland"
-        "QT_QPA_PLATFORMTHEME,qtct"
-
+      
         "ELECTRON_OZONE_PLATFORM_HINT,wayland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP,Hyprland"
