@@ -26,7 +26,6 @@
       color-scheme = "prefer-dark";
     };
   };
-
   
   # Cursor theme (single owner)
   home.pointerCursor = {
