@@ -3,28 +3,18 @@
 {
   gtk = {
     enable = true;
-
     # Global GTK dark mode (GTK2 / GTK3 / GTK4)
     colorScheme = "dark";
-
     # GTK2 / GTK3 theme (GTK4 uses color-scheme, not theming)
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
-
     # Icons for all GTK versions
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-
-    # UI font
-    font = {
-      name = "Noto Sans";
-      size = 11;
-    };
-
     # Cursor theme for GTK
     cursorTheme = {
       name = "Bibata-Modern-Classic";
@@ -57,13 +47,6 @@
     style = {
       name = "adwaita-dark";
       package = pkgs.adwaita-qt;
-    };
-    kde.settings = {
-      kdeglobals = {
-        General = {
-          ColorScheme = "BreezeDark";
-        };
-      };
     };
   };
 
