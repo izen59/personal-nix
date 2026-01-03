@@ -25,9 +25,9 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "kde";
     style = {
-      name = "adwaita-dark";
+      name = "breeze";
     };
   };
 
@@ -53,6 +53,7 @@
     adw-gtk3
     papirus-icon-theme
     bibata-cursors
+    kdePackages.breeze
     adwaita-icon-theme
     adwaita-qt
     adwaita-qt6
