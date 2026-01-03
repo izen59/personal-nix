@@ -22,7 +22,7 @@
       #### Variables
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
-      "$filemanager" = "nemo";
+      "$filemanager" = "dolphin";
 
       #### Environment
       env = [
