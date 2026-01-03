@@ -23,6 +23,15 @@
     };
   };
 
+  qt = {
+    enable = true;
+    platformTheme.name = "kde";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
+  };
+
   # dconf is used only for settings not fully abstracted by HM
   # and for non-GTK consumers (portals, Electron, Qt integration)
   dconf.settings = {
@@ -40,16 +49,6 @@
     x11.enable = true;
   };
 
-  # Qt theming, fully HM-managed, no qt5ct/qt6ct
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk";
-    style = {
-      name = "breeze";
-      package = pkgs.kdePackages.breeze;
-    };
-  };
-
   # Theme assets required by the configuration
   home.packages = with pkgs; [
     adw-gtk3
@@ -57,6 +56,5 @@
     bibata-cursors
     adwaita-icon-theme
     adwaita-qt
-    kdePackages.breeze
   ];
 }
