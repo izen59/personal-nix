@@ -110,6 +110,7 @@
     enable = true;
     terminal = "kitty";
   };
+
   # ────────────────────────────── Fonts ────────────────────────────── 
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
