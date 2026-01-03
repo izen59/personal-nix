@@ -1,54 +1,71 @@
 { config, pkgs, ... }:
 
 {
-  # GTK (GTK3 + GTK4)
   gtk = {
     enable = true;
+
+    # Global GTK dark mode (GTK2 / GTK3 / GTK4)
+    colorScheme = "dark";
+
+    # GTK2 / GTK3 theme (GTK4 uses color-scheme, not theming)
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
+
+    # Icons for all GTK versions
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+
+    # UI font
     font = {
       name = "Noto Sans";
       size = 11;
     };
+
+    # Cursor theme for GTK
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      size = 24;
+      package = pkgs.bibata-cursors;
+    };
   };
-  
-  # GTK4 / libadwaita dark mode
-  # This is the global dark-mode switch that GTK4,
-  # libadwaita, portals, Electron, and Qt read.
+
+  # dconf is used only for settings not fully abstracted by HM
+  # and for non-GTK consumers (portals, Electron, Qt integration)
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
   };
-  
-  # Cursor theme (single owner)
+
+  # Cursor for non-GTK consumers (XWayland, misc toolkits)
   home.pointerCursor = {
     name = "Bibata-Modern-Classic";
     size = 24;
     package = pkgs.bibata-cursors;
-    gtk.enable = true;
+    gtk.enable = false;
     x11.enable = true;
   };
-  
-  # Qt theming (declarative, no qt6ct)
-  # Make Qt follow GTK/portal without manual tools.
+
+  # Qt theming, fully HM-managed, no qt5ct/qt6ct
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
   };
-  
-  # Packages required by the theme
+
+  # Theme assets required by the configuration
   home.packages = with pkgs; [
     adw-gtk3
     papirus-icon-theme
     bibata-cursors
     adwaita-icon-theme
+    adwaita-qt
   ];
 }
