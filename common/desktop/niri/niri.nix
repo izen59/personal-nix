@@ -99,9 +99,15 @@
     blueman
 
     ## File management / Desktop
+    file-roller
     gnome-disk-utility
     nautilus
   ];
+
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "kitty";
+  };
 
   # ────────────────────────────── Fonts ────────────────────────────── 
   fonts.fontconfig.enable = true;
