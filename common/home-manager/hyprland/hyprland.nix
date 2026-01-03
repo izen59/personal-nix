@@ -26,8 +26,9 @@
 
       #### Environment
       env = [
+        "CLUTTER_BACKEND,wayland"
         "ELECTRON_OZONE_PLATFORM_HINT,wayland"
-      
+        "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_DESKTOP,Hyprland"
       ];
