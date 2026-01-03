@@ -58,6 +58,11 @@
       name = "adwaita-dark";
       package = pkgs.adwaita-qt;
     };
+    kdeglobals = {
+      General = {
+        ColorScheme = "BreezeDark";
+      };
+    };
   };
 
   # Theme assets required by the configuration
