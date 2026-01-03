@@ -273,10 +273,4 @@
     theme.name = "adw-gtk3-dark";
     iconTheme.name = "Papirus-Dark";
   };
-
-  qt = {
-    enable = true;
-    style.name = "Adwaita-Dark";
-    platformTheme.name = "qtct";
-  };
 }
