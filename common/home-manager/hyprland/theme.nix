@@ -3,19 +3,21 @@
 {
   gtk = {
     enable = true;
-    # Global GTK dark mode (GTK2 / GTK3 / GTK4)
+
+    # GTK4 / libadwaita: dark mode ONLY
     colorScheme = "dark";
-    # GTK2 / GTK3 theme (GTK4 uses color-scheme, not theming)
+
+    # GTK3 only
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
-    # Icons for all GTK versions
+
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    # Cursor theme for GTK
+
     cursorTheme = {
       name = "Bibata-Modern-Classic";
       size = 24;
@@ -25,10 +27,12 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-      name = "adwaita-dark";
-    };
+    platformTheme.name = "gtk";
+    style.name = "adwaita-dark";
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface".color-scheme = "prefer-dark";
   };
 
   # dconf is used only for settings not fully abstracted by HM
