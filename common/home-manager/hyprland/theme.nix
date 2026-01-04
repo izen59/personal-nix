@@ -9,13 +9,13 @@
 
     # GTK3 only
     theme = {
-      name = "Kanagawa-BL-LB";
-      package = pkgs.kanagawa-gtk-theme;
+      name = "Colloid;
+      package = pkgs.colloid-gtk-theme;
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Colloid";
+      package = pkgs.colloid-icon-theme;
     };
 
     cursorTheme = {
