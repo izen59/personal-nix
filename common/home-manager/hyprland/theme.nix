@@ -10,12 +10,12 @@
     # GTK3 only
     theme = {
       name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
+      package = pkgs.kanagawa-gtk-theme;
     };
 
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.kanagawa-icon-theme;
     };
 
     cursorTheme = {
@@ -47,15 +47,4 @@
     gtk.enable = false;
     x11.enable = true;
   };
-
-  # Theme assets required by the configuration
-  home.packages = with pkgs; [
-    adw-gtk3
-    papirus-icon-theme
-    bibata-cursors
-    kdePackages.breeze
-    adwaita-icon-theme
-    adwaita-qt
-    adwaita-qt6
-  ];
 }
