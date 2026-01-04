@@ -9,7 +9,7 @@
 
     # GTK3 only
     theme = {
-      name = "Colloid;
+      name = "Colloid";
       package = pkgs.colloid-gtk-theme;
     };
 
