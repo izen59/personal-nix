@@ -3,7 +3,6 @@
 {
   gtk = {
     enable = true;
-
     colorScheme = "dark";
 
     theme = {
@@ -25,21 +24,8 @@
 
   qt = {
     enable = true;
-
-    platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
-
-    kde.settings = {
-      kdeglobals = {
-        General = {
-          ColorScheme = "BreezeDark";
-        };
-
-        Icons = {
-          Theme = "Colloid-Dark";
-        };
-      };
-    };
+    platformTheme.name = "qt6ct";
+    style.name = "Adwaita-Dark";
   };
 
   dconf.settings = {
