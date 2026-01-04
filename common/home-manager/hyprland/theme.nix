@@ -14,8 +14,8 @@
     };
 
     iconTheme = {
-      name = "kora";
-      package = pkgs.kora-icon-theme;
+      name = "Kanagawa";
+      package = pkgs.kanagawa-icon-theme;
     };
 
     cursorTheme = {
@@ -24,11 +24,11 @@
       package = pkgs.bibata-cursors;
     };
   };
-
+  
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "kanagawa-gtk-theme";
+    style.name = "adwaita-dark";
   };
 
   # dconf is used only for settings not fully abstracted by HM
