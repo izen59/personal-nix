@@ -2,7 +2,7 @@
 
 {
   fileSystems."/mnt/sambazm" = {
-    device = "//192.168.50.53/zoneminder";
+    device = "//192.168.50.102/zoneminder";
     fsType = "cifs";
     options = [
       "username=sambazm"
@@ -14,4 +14,35 @@
       "x-systemd.idle-timeout=60"
     ];
   };
+
+  fileSystems."/mnt" = {
+    device = "192.168.50.101:/MEDIA";
+    fsType = "nfs";
+    options = [
+      "_netdev"
+      "noatime"
+      "x-systemd.automount"
+    ];
+  };
+
+  fileSystems."/mnt" = {
+    device = "192.168.50.101:/FILEBROWSER";
+    fsType = "nfs";
+    options = [
+      "_netdev"
+      "noatime"
+      "x-systemd.automount"
+    ];
+  };
+
+  fileSystems."/mnt" = {
+    device = "192.168.50.101:/AUDIOBOOKSHELF";
+    fsType = "nfs";
+    options = [
+      "_netdev"
+      "noatime"
+      "x-systemd.automount"
+    ];
+  };
+
 }
