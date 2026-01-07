@@ -55,4 +55,14 @@ fileSystems."/mnt/audiobookshelf" = {
   ];
 };
 
+fileSystems."/mnt/torrent" = {
+  device = "192.168.50.101:/TORRENT";
+  fsType = "nfs";
+  options = [
+    "_netdev"
+    "noatime"
+    "x-systemd.automount"
+  ];
+};
+
 }
