@@ -16,7 +16,7 @@
           {
             toolbar = true; # this actually makes them show up on the toolbar
             bookmarks = [
-              { name = "Proxmox"; url = "http://zoneminder:8095/"; }
+              { name = "Proxmox"; url = "http://homelab:8006/"; }
               { name = "ZM"; url = "http://zoneminder:8095/"; }
               { name = "OMV"; url = "http://openmediavault/"; }
               { name = "qBittorrent"; url = "http://arr:8080/"; }
