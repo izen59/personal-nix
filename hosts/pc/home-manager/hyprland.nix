@@ -33,6 +33,22 @@
       no_initial_focus = on
       match:class = ^(mpv)$
     }
+    
+    # Steam - Main window tiled
+    windowrule {
+      name = windowrule-6
+      tile = on
+      match:class = ^(steam)$
+      match:title = ^(Steam)$
+    }
+    
+    # Steam - All other windows float
+    windowrule {
+      name = windowrule-7
+      float = on
+      match:class = ^(steam)$
+      match:title = ^(?!Steam$).*
+    }
 
     # All Steam UI (main window, friends list, etc.)
     windowrule {
