@@ -212,7 +212,7 @@
       windowrule = [
         # Bluetooth Manager
         {
-          name = "windowrule-1";
+          name = "blueman";
           float = "on";
           center = "on";
           "match:class" = "^(.blueman-manager-wrapped)$";
@@ -220,7 +220,7 @@
     
         # Network Manager
         {
-          name = "windowrule-2";
+          name = "network-manager";
           float = "on";
           center = "on";
           "match:class" = "^(nm-connection-editor)$";
@@ -228,7 +228,7 @@
     
         # PulseAudio Volume Control
         {
-          name = "windowrule-3";
+          name = "pavu";
           float = "on";
           center = "on";
           "match:class" = "^(org.pulseaudio.pavucontrol)$";
@@ -236,46 +236,46 @@
     
         # File dialogs
         {
-          name = "windowrule-4";
+          name = "open-file";
           float = "on";
           center = "on";
           "match:title" = "^(Open File)$";
         }
     
         {
-          name = "windowrule-5";
+          name = "save-file";
           float = "on";
           "match:title" = "^(Save File)$";
         }
     
         # ──────── Style tweaks ────────
         {
-          name = "windowrule-8";
+          name = "nautilus-blur";
           opacity = "0.9";
           "match:class" = "^(org.gnome.Nautilus)$";
         }
     
         {
-          name = "windowrule-10";
+          name = "discord-blur";
           opacity = "0.9";
           "match:class" = "^(vesktop|discord)$";
         }
     
         # ──────── Tearing ────────
         {
-          name = "windowrule-11";
+          name = "exe-tearing";
           immediate = "on";
           "match:title" = ".*\\.exe";
         }
     
         {
-          name = "windowrule-12";
+          name = "minecraft-tearing";
           immediate = "on";
           "match:title" = ".*minecraft.*";
         }
     
         {
-          name = "windowrule-13";
+          name = "steam-tearing";
           immediate = "on";
           "match:class" = "^(steam_app).*";
         }
