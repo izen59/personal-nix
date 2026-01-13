@@ -19,6 +19,7 @@
               { name = "Proxmox"; url = "http://homelab:8006/"; }
               { name = "ZM"; url = "http://zoneminder:8095/"; }
               { name = "AdGuard"; url = "http://adguard:3000/"; }
+              { name = "Grafana"; url = "http://grafana:3000/"; }
               { name = "OMV"; url = "http://openmediavault/"; }
               { name = "qBittorrent"; url = "http://arr:8080/"; }
               { name = "Jellyseerr"; url = "http://arr:5055/"; }
