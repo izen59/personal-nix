@@ -33,6 +33,23 @@
       SpellcheckLanguage = [ "en-US" "ro-RO" ];
       DownloadRestrictions = 1;
       WebRtcLocalIpsAllowedUrls = [ ];
+      DnsOverHttpsMode = "secure";  # Force DoH (no fallback to system DNS)
+      DnsOverHttpsTemplates = "https://dns.quad9.net/dns-query";  # Quad9
+
+      # Brave-specific policies
+      TorDisabled = 0;  # Keep Tor enabled
+      BraveRewardsDisabled = 1;  # Disable crypto rewards
+      BraveWalletDisabled = 1;  # Disable web3/crypto wallet
+      BraveVPNDisabled = 1;  # Disable built-in VPN (use your own)
+      BraveAIChatEnabled = 0;  # Disable AI chat
+      BraveNewsDisabled = 1;  # Disable news feed
+      BraveTalkDisabled = 1;  # Disable video call feature
+      BraveSpeedreaderEnabled = 1;  # Keep Speedreader enabled
+      BraveWaybackMachineEnabled = 1;  # Keep Wayback integration
+      BraveP3AEnabled = 0;  # Disable privacy-preserving analytics
+      BraveStatsPingEnabled = 0;  # Disable stats telemetry
+      BraveWebDiscoveryEnabled = 0;  # Disable web discovery
+      BravePlaylistEnabled = 0;  # Disable playlist feature
     };
   };
 }
