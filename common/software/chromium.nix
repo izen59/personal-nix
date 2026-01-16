@@ -52,8 +52,12 @@
       BravePlaylistEnabled = 0;  # Disable playlist feature
 
       # Bookmarks
+      ImportBookmarks = false;
       EditBookmarksEnabled = true;
       ManagedBookmarks = [
+        {
+          toplevel_name = "!";  # Empty string for minimal visual clutter
+        }
         {
           name = "Proxmox";
           url = "http://homelab:8006/";
