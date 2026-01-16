@@ -80,6 +80,13 @@
       match:class = ^(firefox*)$
     }
 
+    # Brave
+    windowrule {
+      name = brave-workspace
+      workspace = 2
+      match:class = ^(brave*)$
+    }
+
     # ──────── Execs ────────
     #mpv:
     exec-once = sh -c 'sleep 10 && /run/current-system/sw/bin/mpv --no-input-default-bindings --no-border --video-unscaled=yes --no-keepaspect --panscan=1.0 --mute=yes rtsp://192.168.50.227:554/11'
