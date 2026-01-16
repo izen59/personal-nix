@@ -6,10 +6,10 @@
     # Applies to all Chromium-based browsers like Brave
 
     extensions = [
-      "eimadpbcbfnmbkopoojfekhnkhdbieeh";  # Dark reader
-      "nngceckbapebfimnlniiiahkandclblb";  # Bitwarden
-      "mnjggcdmjocbbbhaepdhchncahnbgone";  # SponsorBlock
-      "gebbhagfogifgggkldgodflihgfeippi";  # Return Youtube Dislike
+      "eimadpbcbfnmbkopoojfekhnkhdbieeh"  # Dark reader
+      "nngceckbapebfimnlniiiahkandclblb"  # Bitwarden
+      "mnjggcdmjocbbbhaepdhchncahnbgone"  # SponsorBlock
+      "gebbhagfogifgggkldgodflihgfeippi"  # Return Youtube Dislike
     ];
 
     initialPrefs = {
