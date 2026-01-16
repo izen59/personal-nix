@@ -23,6 +23,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$filemanager" = "nautilus";
+      "$browser" = "brave";
 
       #### Environment
       env = [
@@ -142,7 +143,7 @@
         # Launchers
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $filemanager"
-        "$mainMod, W, exec, firefox"
+        "$mainMod, W, exec, $browser"
         "$mainMod, O, exec, obsidian"
         ", Print, exec, hyprshot -m window -m active --output ~/Pictures/Screenshots"
         "ALT, Print, exec, hyprshot -m region --output ~/Pictures/Screenshots"
