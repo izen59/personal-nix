@@ -55,9 +55,6 @@
       EditBookmarksEnabled = true;
       ManagedBookmarks = [
         {
-          toplevel_name = "Managed Bookmarks";
-        }
-        {
           name = "Proxmox";
           url = "http://homelab:8006/";
         }
