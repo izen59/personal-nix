@@ -84,7 +84,7 @@
     windowrule {
       name = brave-workspace
       workspace = 2
-      match:class = ^(brave*)$
+      match:class = ^(brave-browser*)$
     }
 
     # ──────── Execs ────────
