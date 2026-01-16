@@ -22,7 +22,7 @@
 
     # Extra sentence case flags
     extraOpts = {
-      # Telemetry & Reporting (all disabled)
+      # Telemetry off (0/false)
       MetricsReportingEnabled = false;
       DeviceMetricsReportingEnabled = false;
       HeartbeatEnabled = false;
@@ -37,7 +37,6 @@
       ReportAppInventory = false;
       ReportAppUsage = false;
       ReportWebsiteTelemetry = false;
-      ReportWebsiteTelemetryAllowlist = [ ];
       ReportWebsiteActivityAllowlist = [ ];
       ReportUploadFrequency = 0;
       ReportArcStatusEnabled = false;
@@ -76,12 +75,12 @@
       CloudExtensionRequestEnabled = false;
       UserSecurityAuthenticatedReporting = false;
       UserSecuritySignalsReporting = false;
-    
-      # Privacy/Security essentials
+
+      # Privacy/Security (fixed types)
       PasswordManagerEnabled = false;
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
-      BrowserSignin = false;
+      BrowserSignin = 0;  # 0=disable
       SyncDisabled = true;
       BuiltInDnsClientEnabled = false;
       SafeBrowsingProtectionLevel = 1;
@@ -90,11 +89,9 @@
       SpellcheckEnabled = true;
       SpellcheckLanguage = [ "en-US" "ro-RO" ];
       DownloadRestrictions = 1;
-      DefaultDownloadDirectory = "$HOME/Downloads";
-    
-      SpellcheckServiceEnabled = false;  # No Google
-      WebRtcLocalIpsAllowedUrls = [ ];  # Block WebRTC leaks
-      DnsOverHttpsMode = "secure";  # DoH on
+      SpellcheckServiceEnabled = false;
+      WebRtcLocalIpsAllowedUrls = [ ];
+      DnsOverHttpsMode = "secure";
     };
   };
 }
