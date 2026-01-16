@@ -3,7 +3,7 @@
 {
   programs.chromium = {
     enable = true;
-    # Applies to all Chromium-based browsers like Brave [web:16][web:18]
+    # Applies to all Chromium-based browsers like Brave
 
     extensions = [
       { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; }  # Dark reader
@@ -18,7 +18,7 @@
       "password_manager_enabled" = false;
     };
 
-    enablePlasmaBrowserIntegration = true;  # Plasma users [web:11]
+    enablePlasmaBrowserIntegration = true;
 
     # Extra sentence case flags
     extraOpts = {
@@ -96,5 +96,5 @@
       WebRtcLocalIpsAllowedUrls = [ ];  # Block WebRTC leaks
       DnsOverHttpsMode = "secure";  # DoH on
     };
-
+  };
 }
