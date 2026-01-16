@@ -3,6 +3,7 @@
 {
   programs.chromium = {
     enable = true;
+    enablePlasmaBrowserIntegration = true;
     # Applies to all Chromium-based browsers like Brave
 
     extensions = [
@@ -18,13 +19,10 @@
       "password_manager_enabled" = false;
     };
 
-    enablePlasmaBrowserIntegration = true;
-
     # Extra sentence case flags
     extraOpts = {
       # Remaining essential policies (errors fixed, telemetry removed)
       MetricsReportingEnabled = false;
-    
       PasswordManagerEnabled = false;
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
@@ -35,7 +33,6 @@
       SpellcheckLanguage = [ "en-US" "ro-RO" ];
       DownloadRestrictions = 1;
       WebRtcLocalIpsAllowedUrls = [ ];
-      DnsOverHttpsMode = "secure";
     };
   };
 }
