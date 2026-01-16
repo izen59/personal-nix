@@ -8,6 +8,7 @@
     ./software/cachix.nix
     ./software/distrobox.nix
     ./software/firefox.nix
+    ./software/chromium.nix
 
 
     ./hardware/bluetooth.nix
