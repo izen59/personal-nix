@@ -30,7 +30,6 @@
       AutofillCreditCardEnabled = false;
       BrowserSignin = 0;
       SyncDisabled = true;
-      BuiltInDnsClientEnabled = false;
       SafeBrowsingProtectionLevel = 1;
       SpellcheckEnabled = true;
       SpellcheckLanguage = [ "en-US" "ro-RO" ];
