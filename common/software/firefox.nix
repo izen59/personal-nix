@@ -169,7 +169,6 @@
     # Custom settings:
     "sidebar.revamp" = true;
     "sidebar.verticalTabs" = true;
-    "full-screen-api.ignore-widgets" = true;
      #Webrtc auto audio processing:
     "media.getusermedia.audio.processing.aec.enabled" = false;
     "media.getusermedia.audio.processing.agc.enabled" = false;
@@ -179,9 +178,6 @@
     "browser.tabs.unloadOnLowMemory" = true;
     "browser.tabs.unloadTabInContextMenu" = true;
     "widget.use-xdg-desktop-portal.file-picker" = 1;
-    "gfx.webrender.layer-compositor" = true;
-    "media.wmf.zero-copy-nv12-textures-force-enabled" = true;
-    "browser.tabs.splitView.enabled" = false;
      };
 
      # ---- POLICIES ----
