@@ -23,7 +23,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$filemanager" = "nautilus";
-      "$browser" = "brave";
+      "$browser" = "firefox";
 
       #### Environment
       env = [
