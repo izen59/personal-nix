@@ -41,6 +41,7 @@
     kdePackages.kate
     kdePackages.gwenview
     glib
+    obsidian
 
     # Multimedia / Audio Tools
     pavucontrol
@@ -50,12 +51,6 @@
     wineWowPackages.unstableFull
     winetricks
   ];
-
-  # Neovim as default
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;  # sets EDITOR and VISUAL globally
-  };
 
   # Terminal defaults
   programs.fish.enable = true;
