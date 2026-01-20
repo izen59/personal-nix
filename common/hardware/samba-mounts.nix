@@ -55,6 +55,16 @@ fileSystems."/mnt/audiobookshelf" = {
   ];
 };
 
+fileSystems."/mnt/komga" = {
+  device = "192.168.50.101:/KOMGA";
+  fsType = "nfs";
+  options = [
+    "_netdev"
+    "noatime"
+    "x-systemd.automount"
+  ];
+};
+
 fileSystems."/mnt/torrent" = {
   device = "192.168.50.101:/TORRENT";
   fsType = "nfs";
