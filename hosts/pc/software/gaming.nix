@@ -10,7 +10,7 @@
   environment.systemPackages = with pkgs; [
     mangohud
     goverlay
-    protonup-qt
+    protonplus
     lutris
   ];
 
