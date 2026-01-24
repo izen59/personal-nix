@@ -4,14 +4,14 @@
   imports = [
     ./hardware-configuration.nix
 
-    ./software/apps.nix
+    ./nix/software/apps.nix
 
 
-    ./hardware/network.nix
-    ./hardware/system.nix
+    ./nix/hardware/network.nix
+    ./nix/hardware/system.nix
 
 
-     ../../common/desktop/gnome/default.nix
+     ../../common/nix/desktop/gnome/default.nix
   ];
 
   # Attach PC-specific Home Manager files

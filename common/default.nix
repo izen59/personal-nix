@@ -1,27 +1,27 @@
-# Desktop folder is imported in the default.nix of the specific machine, not here
+# nix/desktop/ folder is imported in the default.nix of the specific machine, not here
 
 { config, inputs, ... }:
 
 {
   imports = [
-    ./software/apps.nix
-    ./software/cachix.nix
-    ./software/distrobox.nix
-    ./software/firefox.nix
-    ./software/chromium.nix
+    ./nix/software/apps.nix
+    ./nix/software/cachix.nix
+    ./nix/software/distrobox.nix
+    ./nix/software/firefox.nix
+    ./nix/software/chromium.nix
 
 
-    ./hardware/bluetooth.nix
-    ./hardware/graphics.nix
-    ./hardware/locale.nix
-    ./hardware/system.nix
-    ./hardware/network.nix
-    ./hardware/printing.nix
-    ./hardware/sound.nix
-    ./hardware/user.nix
-    ./hardware/network-mounts.nix
-    ./hardware/system-hardening.nix
-    ./hardware/network-hardening.nix
+    ./nix/hardware/bluetooth.nix
+    ./nix/hardware/graphics.nix
+    ./nix/hardware/locale.nix
+    ./nix/hardware/system.nix
+    ./nix/hardware/network.nix
+    ./nix/hardware/printing.nix
+    ./nix/hardware/sound.nix
+    ./nix/hardware/user.nix
+    ./nix/hardware/network-mounts.nix
+    ./nix/hardware/system-hardening.nix
+    ./nix/hardware/network-hardening.nix
 
 
     ./home-manager/default.nix
