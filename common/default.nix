@@ -19,7 +19,7 @@
     ./hardware/printing.nix
     ./hardware/sound.nix
     ./hardware/user.nix
-    ./hardware/samba-mounts.nix
+    ./hardware/network-mounts.nix
     ./hardware/system-hardening.nix
     ./hardware/network-hardening.nix
 
