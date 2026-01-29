@@ -42,6 +42,8 @@
     kdePackages.gwenview
     glib
     obsidian
+    mpv
+    haruna
 
     # Multimedia / Audio Tools
     pavucontrol
