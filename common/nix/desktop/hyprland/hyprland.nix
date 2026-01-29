@@ -106,7 +106,7 @@
     gnome-disk-utility
     file-roller
     nautilus
-    xviewer
+    nomacs
   ];
 
   programs.nautilus-open-any-terminal = {
