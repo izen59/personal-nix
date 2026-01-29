@@ -26,7 +26,7 @@
       "$browser" = "firefox";
 
       exec-once = [
-        "gnome-keyring-daemon --start --components=secrets,ssh"
+        "gnome-keyring-daemon --start --components=secrets,ssh"  # Fixes keyring popup
       ];
 
       #### Environment
