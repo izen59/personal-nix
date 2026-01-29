@@ -109,6 +109,7 @@
   ];
 
   # Gnome photos needs this to work:
+  services.gnome.tinysparql.enable = true;
   services.gnome.localsearch.enable = true;
 
   programs.nautilus-open-any-terminal = {
