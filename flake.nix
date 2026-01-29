@@ -76,6 +76,33 @@
           }
         ];
       };
+
+      # ──────────────────────────────── TOSHIBA ─────────────────────────────
+      toshiba = nixpkgs-stable.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs personal-pkgs-nix;
+          user = "hp";
+        };
+        modules = [
+          ./common/default.nix
+          ./hosts/hp/default.nix
+
+          { nixpkgs.overlays = globalOverlays; }
+
+          # Home Manager (stable)
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = false;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              nixpkgs = nixpkgs-stable;
+            };
+          }
+        ];
+      };
+
     };
   };
 }
