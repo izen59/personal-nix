@@ -2,8 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mpv
-    haruna
     spotify
     (chromium.override { enableWideVine = true; })
     brave
