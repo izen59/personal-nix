@@ -108,6 +108,9 @@
     nautilus
   ];
 
+  # Gnome photos needs this to work:
+  services.gnome.localsearch.enable = true;
+
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
