@@ -46,7 +46,6 @@
   libsForQt5.qt5ct
   libsForQt5.qtstyleplugin-kvantum
   kdePackages.qtstyleplugin-kvantum
-  themechanger
   papirus-icon-theme
   ];
 }
