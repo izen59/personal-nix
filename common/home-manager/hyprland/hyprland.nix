@@ -25,6 +25,10 @@
       "$filemanager" = "nautilus";
       "$browser" = "firefox";
 
+      exec-once = [
+        "gnome-keyring-daemon --start --components=secrets,ssh"
+      ];
+
       #### Environment
       env = [
         "CLUTTER_BACKEND,wayland"
