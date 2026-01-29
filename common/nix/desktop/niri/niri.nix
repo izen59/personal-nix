@@ -41,28 +41,28 @@
       "x-scheme-handler/terminal" = [ "kitty.desktop" ];
   
       # Images
-      "image/png" = [ "org.kde.gwenview.desktop" ];
-      "image/jpeg" = [ "org.kde.gwenview.desktop" ];
-      "image/webp" = [ "org.kde.gwenview.desktop" ];
-      "image/gif" = [ "org.kde.gwenview.desktop" ];
-      "image/svg+xml" = [ "org.kde.gwenview.desktop" ];
-      "image/*" = [ "org.kde.gwenview.desktop" ];
-  
+      "image/png" = [ "org.gnome.Photos.desktop" ];
+      "image/jpeg" = [ "org.gnome.Photos.desktop" ];
+      "image/webp" = [ "org.gnome.Photos.desktop" ];
+      "image/gif" = [ "org.gnome.Photos.desktop" ];
+      "image/svg+xml" = [ "org.gnome.Photos.desktop" ];
+      "image/*" = [ "org.gnome.Photos.desktop" ];
+      
       # Video
-      "video/mp4" = [ "org.kde.haruna.desktop" ];
-      "video/x-matroska" = [ "org.kde.haruna.desktop" ];
-      "video/webm" = [ "org.kde.haruna.desktop" ];
-      "video/quicktime" = [ "org.kde.haruna.desktop" ];
-      "video/*" = [ "org.kde.haruna.desktop" ];
-  
+      "video/mp4" = [ "vlc.desktop" ];
+      "video/x-matroska" = [ "vlc.desktop" ];
+      "video/webm" = [ "vlc.desktop" ];
+      "video/quicktime" = [ "vlc.desktop" ];
+      "video/*" = [ "vlc.desktop" ];
+      
       # Audio
-      "audio/mpeg" = [ "org.kde.haruna.desktop" ];
-      "audio/flac" = [ "org.kde.haruna.desktop" ];
-      "audio/ogg" = [ "org.kde.haruna.desktop" ];
-      "audio/wav" = [ "org.kde.haruna.desktop" ];
-      "audio/x-m4a" = [ "org.kde.haruna.desktop" ];
-      "audio/aac" = [ "org.kde.haruna.desktop" ];
-      "audio/*" = [ "org.kde.haruna.desktop" ];
+      "audio/mpeg" = [ "vlc.desktop" ];
+      "audio/flac" = [ "vlc.desktop" ];
+      "audio/ogg" = [ "vlc.desktop" ];
+      "audio/wav" = [ "vlc.desktop" ];
+      "audio/x-m4a" = [ "vlc.desktop" ];
+      "audio/aac" = [ "vlc.desktop" ];
+      "audio/*" = [ "vlc.desktop" ];
     };
   };
   
