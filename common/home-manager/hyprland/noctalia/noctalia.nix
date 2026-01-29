@@ -179,8 +179,6 @@
             { id = "WiFi"; displayMode = "onhover"; }
             {
               id = "Clock";
-              formatHorizontal = "HH:mm / dd.MM.yyyy";
-              formatVertical = "HH mm";
               usePrimaryColor = true;
               useCustomFont = false;
               customFont = "";
