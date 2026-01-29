@@ -44,12 +44,12 @@
       "x-scheme-handler/terminal" = [ "kitty.desktop" ];
   
       # Images
-      "image/png" = [ "org.gnome.Photos.desktop" ];
-      "image/jpeg" = [ "org.gnome.Photos.desktop" ];
-      "image/webp" = [ "org.gnome.Photos.desktop" ];
-      "image/gif" = [ "org.gnome.Photos.desktop" ];
-      "image/svg+xml" = [ "org.gnome.Photos.desktop" ];
-      "image/*" = [ "org.gnome.Photos.desktop" ];
+      "image/png" = [ "org.gnome.Loupe.desktop" ];
+      "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
+      "image/webp" = [ "org.gnome.Loupe.desktop" ];
+      "image/gif" = [ "org.gnome.Loupe.desktop" ];
+      "image/svg+xml" = [ "org.gnome.Loupe.desktop" ];
+      "image/*" = [ "org.gnome.Loupe.desktop" ];
       
       # Video
       "video/mp4" = [ "vlc.desktop" ];
