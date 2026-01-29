@@ -77,8 +77,8 @@
         ];
       };
 
-      # ──────────────────────────────── TOSHIBA ─────────────────────────────
-      toshiba = nixpkgs-stable.lib.nixosSystem {
+      # ──────────────────────────────── HP ─────────────────────────────
+      hp = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs personal-pkgs-nix;
