@@ -43,6 +43,7 @@
   };
 
   home.packages = with pkgs; [
-    kdePackages.breeze
+    adwaita-qt
+    adwaita-qt6
   ];
 }
