@@ -39,12 +39,12 @@
     kitty
     starship
     yazi
-    kdePackages.kate
-    kdePackages.gwenview
     glib
     obsidian
     mpv
-    haruna
+    vlc
+    kdePackages.kate
+    gnome-photos
 
     # Multimedia / Audio Tools
     pavucontrol
