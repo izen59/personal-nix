@@ -25,8 +25,8 @@ fileSystems."/mnt/media" = {
   ];
 };
 
-fileSystems."/mnt/cloud" = {
-  device = "192.168.50.101:/CLOUD";
+fileSystems."/mnt/storage" = {
+  device = "192.168.50.101:/STORAGE";
   fsType = "nfs";
   options = [
     "_netdev"
