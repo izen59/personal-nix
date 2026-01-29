@@ -3,7 +3,7 @@
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = trus
+  boot.loader.efi.canTouchEfiVariables = true;
   # Use LTS kernel.
   boot.kernelPackages = pkgs.linuxPackages_6_12;
 
