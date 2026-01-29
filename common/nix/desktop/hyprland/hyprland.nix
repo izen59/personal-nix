@@ -106,7 +106,7 @@
     gnome-disk-utility
     file-roller
     nautilus
-    loupe
+    gthumb
   ];
 
   programs.nautilus-open-any-terminal = {
