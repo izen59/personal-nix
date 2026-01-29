@@ -7,6 +7,6 @@
     obs-studio
     libreoffice-fresh
     spotify
-    discord
+    
   ];
 }
