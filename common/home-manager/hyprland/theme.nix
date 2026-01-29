@@ -25,7 +25,7 @@
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-    style.name = "adwaita-dark";
+    style.name = "kvantum";
   };
 
   dconf.settings = {
@@ -43,7 +43,10 @@
   };
 
   home.packages = with pkgs; [
-    adwaita-qt
-    adwaita-qt6
+  libsForQt5.qt5ct
+  libsForQt5.qtstyleplugin-kvantum
+  kdePackages.qtstyleplugin-kvantum
+  themechanger
+  papirus-icon-theme
   ];
 }
