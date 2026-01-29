@@ -14,6 +14,7 @@
 
     # Filesystem & Storage Utilities 
     ntfs3g
+    exfat
     exfatprogs
     unrar
     usbutils
