@@ -68,7 +68,7 @@ environment {
 }
 
 // ────────────────────────────── Startup ──────────────────────────────
-spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets,ssh"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "mako"
