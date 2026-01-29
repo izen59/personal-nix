@@ -153,7 +153,7 @@
             {
               id = "MediaMini";
               hideMode = "visible";
-              hideWhenIdle = false;
+              hideWhenIdle = true;
               maxWidth = 200;
               scrollingMode = "hover";
               showAlbumArt = true;
