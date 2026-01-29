@@ -250,11 +250,6 @@
         installation_mode = "force_installed";
       };
 
-      # Return Youtube Dislike
-      "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = {
-        install_url = "https://addons.mozilla.org/firefox/downloads/latest/{762f9885-5a13-4abd-9c77-433dcd38b8fd}/latest.xpi";
-        installation_mode = "force_installed";
-      };
     };
   };
 };
