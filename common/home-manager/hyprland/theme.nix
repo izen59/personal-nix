@@ -22,11 +22,11 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qt5ct";
-    style.name = "kvantum";
-  };
+  #qt = {
+  #  enable = true;
+  #  platformTheme.name = "qt5ct";
+  #  style.name = "kvantum";
+  #};
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
