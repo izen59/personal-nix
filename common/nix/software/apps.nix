@@ -40,11 +40,9 @@
     starship
     yazi
     glib
-    obsidian
     mpv
     vlc
     kdePackages.kate
-    gnome-photos
 
     # Multimedia / Audio Tools
     pavucontrol
