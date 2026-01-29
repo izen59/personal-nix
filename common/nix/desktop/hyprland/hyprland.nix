@@ -106,7 +106,7 @@
     gnome-disk-utility
     file-roller
     nautilus
-    eog
+    xviewer
   ];
 
   programs.nautilus-open-any-terminal = {
