@@ -36,7 +36,7 @@
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs personal-pkgs-nix;
-          user = "izen";
+          user = "pc";
         };
         modules = [
           ./common/default.nix
