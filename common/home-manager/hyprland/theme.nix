@@ -47,7 +47,6 @@
   libsForQt5.qtstyleplugin-kvantum
   kdePackages.qtstyleplugin-kvantum
   papirus-icon-theme
-  adwaita-qt
-  adwaita-qt6
+  kdePackages.breeze
   ];
 }
