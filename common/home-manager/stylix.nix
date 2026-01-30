@@ -73,9 +73,10 @@
 
     # Per app settings:
 
-    targets.firefox.profileNames = [
-      "mainprofile"
-    ];
+    targets.firefox = {
+      profileNames = [ "mainprofile" ];
+      fonts.enable = false;
+    };
 
   };
 }
