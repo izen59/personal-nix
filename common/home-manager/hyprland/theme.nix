@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  # ───── GTK ─────
   gtk = {
     enable = true;
     colorScheme = "dark";
@@ -11,8 +12,8 @@
     };
 
     iconTheme = {
-      name = "Colloid-Dark";
-      package = pkgs.colloid-icon-theme;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
 
     cursorTheme = {
@@ -20,20 +21,29 @@
       size = 24;
       package = pkgs.bibata-cursors;
     };
-  };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qt5ct";
-   # style.name = "kvantum";
-  };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
   };
 
+  # ───── Qt follows GTK ─────
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+  };
+
+  # ───── Environment ─────
+  home.sessionVariables = {
+    GTK_THEME = "Colloid-Dark";
+    QT_QPA_PLATFORMTHEME = "gtk3";
+  };
+
+  # ───── Cursor (X11/Wayland fallback) ─────
   home.pointerCursor = {
     name = "Bibata-Modern-Classic";
     size = 24;
@@ -41,12 +51,4 @@
     gtk.enable = false;
     x11.enable = true;
   };
-
-  home.packages = with pkgs; [
-  libsForQt5.qt5ct
-  libsForQt5.qtstyleplugin-kvantum
-  kdePackages.qtstyleplugin-kvantum
-  papirus-icon-theme
-  ayu-theme-gtk
-  ];
 }
