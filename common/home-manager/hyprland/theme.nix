@@ -1,6 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
+  # ───── dconf: global dark preference (libadwaita) ─────
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   # ───── GTK ─────
   gtk = {
     enable = true;
@@ -8,7 +15,7 @@
 
     theme = {
       name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
+      package = pkgs.gnome.gnome-themes-extra;
     };
 
     iconTheme = {
@@ -21,26 +28,12 @@
       size = 24;
       package = pkgs.bibata-cursors;
     };
-
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
   };
 
   # ───── Qt follows GTK ─────
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
-  };
-
-  # ───── Environment ─────
-  home.sessionVariables = {
-    GTK_THEME = "Adwaita:dark";
-    QT_QPA_PLATFORMTHEME = lib.mkForce "gtk3";
+    platformTheme.name = "gnome";
   };
 
   # ───── Cursor fallback ─────
