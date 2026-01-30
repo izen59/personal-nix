@@ -1,23 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # Bootloader: GRUB
-  boot.loader = {
-    systemd-boot.enable = false; # dont use systemd-boot
-
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";  # matches hardware-configuration.nix
-    };
-    
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-      useOSProber = true;
-      configurationLimit = 10;  # keeps /boot from filling up
-    };
-  };
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Switch to official Zen kernel.
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
