@@ -7,8 +7,8 @@
     colorScheme = "dark";
 
     theme = {
-      name = "Colloid-Dark";
-      package = pkgs.colloid-gtk-theme;
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
     };
 
     iconTheme = {
@@ -39,11 +39,11 @@
 
   # ───── Environment ─────
   home.sessionVariables = {
-    GTK_THEME = "Colloid-Dark";
+    GTK_THEME = "Adwaita:dark";
     QT_QPA_PLATFORMTHEME = lib.mkForce "gtk3";
   };
 
-  # ───── Cursor (X11/Wayland fallback) ─────
+  # ───── Cursor fallback ─────
   home.pointerCursor = {
     name = "Bibata-Modern-Classic";
     size = 24;
