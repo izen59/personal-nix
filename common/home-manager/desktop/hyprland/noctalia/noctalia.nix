@@ -71,7 +71,7 @@
         density = "default";
         showCapsule = false;
         #backgroundOpacity = 1;
-        capsuleOpacity = 1;
+        #capsuleOpacity = 1;
         exclusive = true;
         floating = false;
         marginHorizontal = 0.25;
@@ -203,17 +203,6 @@
         { id = "weather-card"; enabled = true; }
       ];
 
-      colorSchemes = {
-        predefinedScheme = "Monochrome";
-        darkMode = true;
-        schedulingMode = "off";
-        useWallpaperColors = false;
-        generateTemplatesForPredefined = true;
-        matugenSchemeType = "scheme-fruit-salad";
-        manualSunrise = "06:30";
-        manualSunset = "18:30";
-      };
-
       controlCenter = {
         position = "close_to_bar_button";
 
@@ -276,10 +265,10 @@
       };
 
       ui = {
-        fontDefault = "Maple Mono Normal NF";
-        fontFixed = "JetBrainsMono Nerd Font";
-        fontDefaultScale = 1;
-        fontFixedScale = 1;
+        #fontDefault = "Maple Mono Normal NF";
+        #fontFixed = "JetBrainsMono Nerd Font";
+        #fontDefaultScale = 1;
+        #fontFixedScale = 1;
         panelsAttachedToBar = true;
         settingsPanelMode = "attached";
         tooltipsEnabled = true;
