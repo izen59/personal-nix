@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # ───── GTK ─────
@@ -40,7 +40,7 @@
   # ───── Environment ─────
   home.sessionVariables = {
     GTK_THEME = "Colloid-Dark";
-    QT_QPA_PLATFORMTHEME = "gtk3";
+    QT_QPA_PLATFORMTHEME = lib.mkForce "gtk3";
   };
 
   # ───── Cursor (X11/Wayland fallback) ─────
