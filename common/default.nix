@@ -25,6 +25,5 @@
 
 
     ./home-manager/default.nix
-    ./stylix/default.nix
   ];
 }
