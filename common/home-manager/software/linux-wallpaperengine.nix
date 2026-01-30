@@ -5,14 +5,14 @@
     enable = true;
 
     assetsPath =
-      "/mnt/extras/SteamLibrary/steamapps/common/wallpaper_engine/assets";
+      "/media/extras/SteamLibrary/steamapps/common/wallpaper_engine/assets";
 
     wallpapers = [
       {
         monitor = "HDMI-A-1";
 
         wallpaperId =
-          "/mnt/extras/SteamLibrary/steamapps/workshop/content/431960/2359043440";
+          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/2359043440";
 
         fps = 30;
 
@@ -27,7 +27,7 @@
         monitor = "DP-1";
 
         wallpaperId =
-          "/mnt/extras/SteamLibrary/steamapps/workshop/content/431960/2359043440";
+          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/2359043440";
       }
     ];
   };
