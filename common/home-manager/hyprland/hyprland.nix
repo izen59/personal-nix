@@ -36,6 +36,20 @@
         "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_DESKTOP,Hyprland"
+      
+        # GTK: official dark preference
+        "GTK_THEME,Adwaita:dark"
+        "GTK_ICON_THEME,Papirus-Dark"
+      
+        # Qt: toolkit default + dark preference
+        "QT_QPA_PLATFORMTHEME,qt5ct"
+        "QT_ICON_THEME,Papirus-Dark"
+        "QT_STYLE_OVERRIDE,Fusion"
+        "QT_COLOR_SCHEME,prefer-dark"
+      
+        # Cursor
+        "XCURSOR_THEME,Bibata-Modern-Classic"
+        "XCURSOR_SIZE,24"
       ];
 
       # Set global scale to 1
