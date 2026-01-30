@@ -38,7 +38,6 @@
     exiftool
     kitty
     starship
-    yazi
     glib
     mpv
     vlc

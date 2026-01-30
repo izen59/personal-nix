@@ -9,11 +9,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./firefox/firefox-bookmarks.nix
-    ./yazi/yazi.nix
-    #./vim/neovim.nix
-    ./terminal/fish.nix
-    ./terminal/starship.nix
-    ./wallpaperengine/linux-wallpaperengine.nix
+    ./software/default.nix
+    ./stylix/default.nix
   ];
 }

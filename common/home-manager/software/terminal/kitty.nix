@@ -26,10 +26,6 @@
       # Copy
       "ctrl+c" = "copy_or_interrupt";
 
-      # Search (custom kitten)
-      "ctrl+f"      = "launch --location=hsplit --allow-remote-control kitty +kitten search.py @active-kitty-window-id";
-      "kitty_mod+f" = "launch --location=hsplit --allow-remote-control kitty +kitten search.py @active-kitty-window-id";
-
       # Scroll
       "page_up"   = "scroll_page_up";
       "page_down" = "scroll_page_down";
@@ -51,16 +47,8 @@
       # window_margin_width 21.75
     '';
 
-    # Theme (optional)
-    themeFile = "cherry-midnight";
-
     # Custom kittens
     environment = { }; # define env vars if needed
   };
 
-  # Install your kittens alongside config
-  home.file = {
-    ".config/kitty/scroll_mark.py".source = ./kitty/scroll_mark.py;
-    ".config/kitty/search.py".source      = ./kitty/search.py;
-  };
 }
