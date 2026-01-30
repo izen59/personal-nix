@@ -102,6 +102,10 @@
     networkmanagerapplet 
     blueman
 
+    # Themes and icons
+    papirus-icon-theme
+    libsForQt5.qt5ct
+
     ## File management / Desktop
     gnome-disk-utility
     file-roller
