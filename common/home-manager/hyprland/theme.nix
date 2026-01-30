@@ -34,12 +34,14 @@
   qt = {
     enable = true;
     platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
+    style.name = "breeze";
   };
 
   # ───── Export dark GTK preference to session ─────
   home.sessionVariables = {
     GTK_THEME = "Adwaita:dark";
+    QT_STYLE_OVERRIDE = "breeze";
+    KDE_COLOR_SCHEME = "BreezeDark";
   };
 
   # Make sure graphical apps see env vars
