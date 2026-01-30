@@ -144,7 +144,7 @@
               showLabelsOnlyWhenOccupied = true;
               characterCount = 2;
               showApplications = false;
-              followFocusedScreen = true;
+              followFocusedScreen = false;
               colorizeIcons = false;
             }
           ];
