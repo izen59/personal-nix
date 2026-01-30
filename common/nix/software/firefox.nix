@@ -167,6 +167,8 @@
     "layout.word_select.eat_space_to_next_word" = false;
 
     # Custom settings:
+    "network.trr.mode" = 2;
+    "network.trr.uri" = "https://dns.quad9.net/dns-query";
     "sidebar.revamp" = true;
     "sidebar.verticalTabs" = true;
      #Webrtc auto audio processing:
@@ -178,6 +180,7 @@
     "browser.tabs.unloadOnLowMemory" = true;
     "browser.tabs.unloadTabInContextMenu" = true;
     "widget.use-xdg-desktop-portal.file-picker" = 1;
+
      };
 
      # ---- POLICIES ----
