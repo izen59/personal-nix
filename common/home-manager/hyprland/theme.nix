@@ -25,7 +25,7 @@
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-    style.name = "kvantum";
+   # style.name = "kvantum";
   };
 
   dconf.settings = {
@@ -47,6 +47,6 @@
   libsForQt5.qtstyleplugin-kvantum
   kdePackages.qtstyleplugin-kvantum
   papirus-icon-theme
-  kdePackages.breeze
+  ayu-theme-gtk
   ];
 }
