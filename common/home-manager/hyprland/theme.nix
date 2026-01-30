@@ -45,7 +45,7 @@
   };
 
   # Make sure graphical apps see env vars
-  #systemd.user.sessionVariables = config.home.sessionVariables;
+  systemd.user.sessionVariables = config.home.sessionVariables;
 
   # ───── KDE apps default dark scheme ─────
   xdg.configFile."kdeglobals".text = ''
