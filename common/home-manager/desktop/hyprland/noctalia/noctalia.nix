@@ -272,7 +272,7 @@
         panelsAttachedToBar = true;
         settingsPanelMode = "attached";
         tooltipsEnabled = true;
-        panelBackgroundOpacity = 1;
+        #panelBackgroundOpacity = 1;
       };
 
       wallpaper = {
