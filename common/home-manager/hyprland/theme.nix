@@ -25,7 +25,7 @@
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-  #  style.name = "kvantum";
+    style.name = "kvantum";
   };
 
   dconf.settings = {
