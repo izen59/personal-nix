@@ -9,20 +9,6 @@
 
       format = "$time$cmd_duration$username[](fg:accent bg:surface2)$directory[](fg:surface2 bg:surface3)$git_branch$git_status[](fg:surface3)$character";
 
-      palette = "waybar";
-
-      palettes.waybar = {
-        background = "#1A171C"; # bar background
-        surface    = "#2A2430";
-        surface2   = "#3A3146";
-        surface3   = "#4C3E63";
-        accent     = "#C6A0F6";
-        accent_soft= "#B7BDF8";
-        text       = "#E9E0E8";
-        warn       = "#ED8796";
-        ok         = "#A6E3A1";
-      };
-
       time = {
         disabled = false;
         time_format = "%R";
