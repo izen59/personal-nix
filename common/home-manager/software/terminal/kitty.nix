@@ -7,13 +7,6 @@
     enableGitIntegration = false;         # optional
     shellIntegration.enableFishIntegration = true;
 
-    # Font section (Home Manager handles this submodule cleanly)
-    font = {
-      package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrains Mono Nerd Font";
-      size = 11.0;
-    };
-
     settings = {
       cursor_shape = "beam";
       cursor_trail = 1;
