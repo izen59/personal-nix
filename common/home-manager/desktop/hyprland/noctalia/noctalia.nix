@@ -70,7 +70,7 @@
         position = "top";
         density = "default";
         showCapsule = false;
-        backgroundOpacity = 1;
+        #backgroundOpacity = 1;
         capsuleOpacity = 1;
         exclusive = true;
         floating = false;
