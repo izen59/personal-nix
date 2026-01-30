@@ -9,6 +9,8 @@
     ./qt.nix
     ./noctalia.nix
     ./hyprland.nix
+    ./kitty.nix
+    ./firefox.nix
 
   ];
 }
