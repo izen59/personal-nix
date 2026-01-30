@@ -6,11 +6,17 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url   = "github:nixos/nixpkgs/nixos-25.11";
 
+    # ── Personal Packages ───────────────────────────────────────────────────
+    personal-pkgs-nix.url = "github:izen67/personal-pkgs-nix";
+
     # ── Home Manager ────────────────────────────────────────────────────────
     home-manager.url = "github:nix-community/home-manager";
 
-    # ── Personal Packages ───────────────────────────────────────────────────
-    personal-pkgs-nix.url = "github:izen67/personal-pkgs-nix";
+    # ── Stylix ──────────────────────────────────────────────────────────────
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
 
     # ── Noctalia ────────────────────────────────────────────────────────────
     noctalia = {
@@ -19,12 +25,12 @@
     };
   };
 
-  outputs = { self, nixpkgs-unstable, nixpkgs-stable, home-manager, personal-pkgs-nix, ... }@inputs:
+  outputs = { self, nixpkgs-unstable, nixpkgs-stable, home-manager, stylix, personal-pkgs-nix, ... }@inputs:
   let
-    # Overlay for personal packages
     globalOverlays = personal-pkgs-nix.overlays.x86_64-linux;
   in {
     nixosConfigurations = {
+
       # ──────────────────────────────── PC ────────────────────────────────
       pc = nixpkgs-unstable.lib.nixosSystem {
         system = "x86_64-linux";
@@ -38,7 +44,6 @@
 
           { nixpkgs.overlays = globalOverlays; }
 
-          # Home Manager (unstable)
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = false;
@@ -64,7 +69,6 @@
 
           { nixpkgs.overlays = globalOverlays; }
 
-          # Home Manager (stable)
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = false;
@@ -77,7 +81,7 @@
         ];
       };
 
-      # ──────────────────────────────── HP ─────────────────────────────
+      # ──────────────────────────────── HP ────────────────────────────────
       hp = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
@@ -90,7 +94,6 @@
 
           { nixpkgs.overlays = globalOverlays; }
 
-          # Home Manager (stable)
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = false;
@@ -106,4 +109,3 @@
     };
   };
 }
-
