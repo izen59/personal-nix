@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  fileSystems."/media/sambazm" = {
+  fileSystems."/media/samba-zoneminder" = {
     device = "//192.168.50.102/zoneminder";
     fsType = "cifs";
     options = [
@@ -15,7 +15,7 @@
     ];
   };
 
-fileSystems."/media/media" = {
+fileSystems."/media/nas-media" = {
   device = "192.168.50.101:/MEDIA";
   fsType = "nfs";
   options = [
@@ -25,7 +25,7 @@ fileSystems."/media/media" = {
   ];
 };
 
-fileSystems."/media/storage" = {
+fileSystems."/media/nas-storage" = {
   device = "192.168.50.101:/STORAGE";
   fsType = "nfs";
   options = [
@@ -35,7 +35,7 @@ fileSystems."/media/storage" = {
   ];
 };
 
-fileSystems."/media/audiobookshelf" = {
+fileSystems."/media/nas-audiobookshelf" = {
   device = "192.168.50.101:/AUDIOBOOKSHELF";
   fsType = "nfs";
   options = [
@@ -45,7 +45,7 @@ fileSystems."/media/audiobookshelf" = {
   ];
 };
 
-fileSystems."/media/komga" = {
+fileSystems."/media/nas-komga" = {
   device = "192.168.50.101:/KOMGA";
   fsType = "nfs";
   options = [
@@ -55,7 +55,7 @@ fileSystems."/media/komga" = {
   ];
 };
 
-fileSystems."/media/torrent" = {
+fileSystems."/media/nas-torrent" = {
   device = "192.168.50.101:/TORRENT";
   fsType = "nfs";
   options = [
