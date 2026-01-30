@@ -5,6 +5,7 @@
     inputs.stylix.homeModules.stylix
 
     ./stylix.nix
+    ./fonts.nix
     ./gtk.nix
     ./qt.nix
     ./noctalia.nix
