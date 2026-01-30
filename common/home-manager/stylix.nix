@@ -16,7 +16,7 @@
 
     # Color palette
     base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+      "${pkgs.base16-schemes}/share/themes/kanagawa-dragon.yaml";
 
     # Icons
     icons = {
@@ -70,5 +70,12 @@
       desktop = 1.0;
       popups = 1.0;
     };
+
+    # Per app settings:
+
+    targets.firefox.profileNames = [
+      "mainprofile"
+    ];
+
   };
 }
