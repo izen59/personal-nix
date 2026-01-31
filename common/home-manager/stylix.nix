@@ -15,8 +15,7 @@
     polarity = "dark";
 
     # Color palette
-    base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/kanagawa-dragon.yaml";
+    image = /home/izen/Pictures/wallpapers/my-wallpaper.jpg;
 
     # Icons
     icons = {
