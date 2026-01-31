@@ -15,7 +15,7 @@
     polarity = "dark";
 
     # Color palette
-    image = ../../assets/wallpaper2.png;
+    image = ../../assets/wallpaper3.png;
 
     # Icons
     icons = {
