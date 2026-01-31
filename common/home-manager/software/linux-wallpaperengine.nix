@@ -12,7 +12,7 @@
         monitor = "HDMI-A-1";
 
         wallpaperId =
-          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/1199182195";
+          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/1468116360";
 
         fps = 30;
 
@@ -27,7 +27,7 @@
         monitor = "DP-1";
 
         wallpaperId =
-          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/1199182195";
+          "/media/extras/SteamLibrary/steamapps/workshop/content/431960/1468116360";
       }
     ];
   };
