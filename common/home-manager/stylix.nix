@@ -15,7 +15,7 @@
     polarity = "dark";
 
     # Color palette
-    image = /home/izen/Pictures/wallpaper.png;
+    image = /home/pc/Pictures/wallpaper.png;
 
     # Icons
     icons = {
