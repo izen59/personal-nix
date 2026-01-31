@@ -15,7 +15,7 @@
     polarity = "dark";
 
     # Color palette
-    image = ../../assets/wallpaper3.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/kanagawa-dragon.yaml";
 
     # Icons
     icons = {
