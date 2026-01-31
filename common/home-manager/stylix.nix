@@ -15,7 +15,7 @@
     polarity = "dark";
 
     # Color palette
-    image = /home/pc/Pictures/wallpaper.png;
+    image = ../../assets/wallpaper2.png;
 
     # Icons
     icons = {
