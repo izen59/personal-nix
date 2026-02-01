@@ -12,6 +12,7 @@
     goverlay
     protonplus
     lutris
+    prismlauncher
   ];
 
   environment.sessionVariables = {
