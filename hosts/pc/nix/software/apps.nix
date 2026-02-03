@@ -12,12 +12,9 @@
     #vesktop
     filen-desktop
     jellyfin-desktop
-    piper
 
     # from external personal flake
     #personal.blender-bin
     #personal.gmodpatchtool-bin
   ];
-
-        services.ratbagd.enable = true;
 }
