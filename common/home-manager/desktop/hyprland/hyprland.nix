@@ -84,7 +84,7 @@
         kb_layout = "us";
         kb_options = "grp:alt_shift_toggle";
         follow_mouse = 2;
-        sensitivity = 0.5;
+        sensitivity = 0.4;
         accel_profile = "flat";
         touchpad = {
           natural_scroll = false;
