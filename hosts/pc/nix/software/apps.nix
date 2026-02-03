@@ -12,6 +12,8 @@
     #vesktop
     filen-desktop
     jellyfin-desktop
+    libratbag
+    piper
 
     # from external personal flake
     #personal.blender-bin
