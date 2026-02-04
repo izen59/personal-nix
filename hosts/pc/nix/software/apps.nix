@@ -13,6 +13,9 @@
     filen-desktop
     jellyfin-desktop
 
+    protonmail-export
+    thunderbird
+
     # from external personal flake
     #personal.blender-bin
     #personal.gmodpatchtool-bin
