@@ -8,10 +8,9 @@
     qbittorrent
     libreoffice-fresh
     discord
-    #discord-canary
-    #vesktop
     filen-desktop
     jellyfin-desktop
+    rustdesk
 
     protonmail-export
     thunderbird
