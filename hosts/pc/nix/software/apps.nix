@@ -10,7 +10,6 @@
     discord
     filen-desktop
     jellyfin-desktop
-    rustdesk
 
     protonmail-export
     thunderbird
