@@ -7,6 +7,7 @@
     obs-studio
     libreoffice-fresh
     spotify
+    jellyfin-desktop
     
   ];
 }
