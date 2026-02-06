@@ -15,6 +15,7 @@
           "/media/extras/SteamLibrary/steamapps/workshop/content/431960/2954922038";
 
         fps = 30;
+        scaling = fit;
 
         audio = {
           silent = true;
