@@ -8,6 +8,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    wineWowPackages.unstableFull
+    winetricks
     mangohud
     goverlay
     protonplus
