@@ -46,10 +46,6 @@
     # Multimedia / Audio Tools
     pavucontrol
     ffmpeg-full
-
-    # Windows Compatibility (Wine)
-    wineWowPackages.unstableFull
-    winetricks
   ];
 
   # Terminal defaults
