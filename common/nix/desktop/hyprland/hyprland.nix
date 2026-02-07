@@ -97,6 +97,7 @@
     wayland-protocols 
     xdg-user-dirs 
     xorg.xhost
+    hyprpolkitagent # stuff like restoring images with gnome disks doesnt work without this, its mandatory.
 
     ## Network & Bluetooth applets
     networkmanagerapplet 
