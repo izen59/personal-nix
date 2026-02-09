@@ -15,7 +15,7 @@
     user = "ollama";
     group = "ollama";
     port = 11434;
-    host = "127.0.0.1";
+    host = "0.0.0.0";
     home = "/var/lib/ollama";
     openFirewall = false;
 
