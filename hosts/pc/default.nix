@@ -7,7 +7,7 @@
     ./nix/software/apps.nix
     ./nix/software/gaming.nix
     ./nix/software/vms.nix
-    ./nix/software/ollama.nix
+    #./nix/software/ollama.nix
 
 
     ./nix/hardware/mounts.nix
