@@ -8,7 +8,7 @@
     package = pkgs.ollama-rocm;
 
     # GPU acceleration
-    acceleration = "rocm";
+    #acceleration = "rocm";
     rocmOverrideGfx = "12.0.0";
 
     # Runtime + networking
