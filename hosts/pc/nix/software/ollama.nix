@@ -17,7 +17,7 @@
     port = 11434;
     host = "0.0.0.0";
     home = "/var/lib/ollama";
-    openFirewall = false;
+    openFirewall = true;
 
     # Optional model handling
     syncModels = true;
