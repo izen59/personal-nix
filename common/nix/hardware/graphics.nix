@@ -4,9 +4,13 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+
     extraPackages = with pkgs; [
-      libva
+      libva      # VA-API base
+      intel-media-driver      # Intel VA-API driver (modern, Gen8+)
+      intel-vaapi-driver      # Optional: older Intel fallback (harmless on AMD)
     ];
+
     extraPackages32 = with pkgs.pkgsi686Linux; [
       libva
     ];
@@ -17,5 +21,4 @@
     mesa-demos
     vulkan-tools
   ];
-
 }
