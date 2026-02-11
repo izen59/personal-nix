@@ -6,6 +6,6 @@
     ./terminal/starship.nix
     ./terminal/kitty.nix
     ./firefox-bookmarks.nix
-    ./linux-wallpaperengine.nix
+    #./linux-wallpaperengine.nix
   ];
 }
