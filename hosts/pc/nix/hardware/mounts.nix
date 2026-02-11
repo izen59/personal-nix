@@ -6,7 +6,7 @@
 
   #mount ssd
   fileSystems."/media/extras" = {
-    device = "/dev/disk/by-uuid/60fc72ce-8793-4f92-8641-0db9411d931e";
+    device = "/dev/disk/by-uuid/552f4b63-8ba0-46b7-9054-a206402bc4f4";
     fsType = "ext4";
     options = [ "nofail" "x-systemd.device-timeout=5s" ];
   };
