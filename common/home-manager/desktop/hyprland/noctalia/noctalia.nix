@@ -102,38 +102,8 @@
               usePrimaryColor = false;
             }
             {
-              id = "CustomButton";
-              icon = "temperature";
-              hideMode = "alwaysExpanded";
-              showIcon = true;
-              textCommand = ''
-                sh -c 'h=$(grep -l amdgpu /sys/class/hwmon/hwmon*/name 2>/dev/null | head -n1 | sed "s|/name||"); v=$(cat "$h/temp1_input" 2>/dev/null); echo "GPU: $((v/1000))°C"'
-              '';
-              textIntervalMs = 3000;
-              textStream = false;
-              parseJson = false;
-              textCollapse = "";
-              maxTextLength = {
-                horizontal = 10;
-                vertical = 10;
-              };
-              leftClickExec = "";
-              leftClickUpdateText = false;
-              middleClickExec = "";
-              middleClickUpdateText = false;
-              rightClickExec = "";
-              rightClickUpdateText = false;
-              wheelMode = "unified";
-              wheelExec = "";
-              wheelUpdateText = false;
-              wheelUpExec = "";
-              wheelUpUpdateText = false;
-              wheelDownExec = "";
-              wheelDownUpdateText = false;
+                id = "plugin:privacy-indicator";
             }
-          {
-              id = "plugin:privacy-indicator";
-          }
           ];
 
           center = [
