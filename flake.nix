@@ -31,7 +31,7 @@
   in {
     nixosConfigurations = {
 
-      # ──────────────────────────────── PC ────────────────────────────────
+      # ──────────────────────────────── Main PC ────────────────────────────────
       pc = nixpkgs-unstable.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
