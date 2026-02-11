@@ -56,6 +56,31 @@
         ];
       };
 
+      # ──────────────────────────────── Gaming PC ────────────────────────────────
+      gaming = nixpkgs-unstable.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs personal-pkgs-nix;
+          user = "gaming";
+        };
+        modules = [
+          ./common/default.nix
+          ./hosts/gaming/default.nix
+
+          { nixpkgs.overlays = globalOverlays; }
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = false;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              nixpkgs = nixpkgs-unstable;
+            };
+          }
+        ];
+      };
+
       # ──────────────────────────────── TOSHIBA ─────────────────────────────
       toshiba = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
