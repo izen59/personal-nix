@@ -14,7 +14,7 @@
   #home.file.".config/kcminputrc".force = true;
 
   #WALLPAPER
-  #home.file."Pictures/wallpaper.png".source = ../../../assets/wallpaper.png;
+  home.file."Pictures/wallpaper.png".source = ../../../assets/wallpaper5.png;
   #home.file."Pictures/wallpaper.png".force = true;
 
 }
