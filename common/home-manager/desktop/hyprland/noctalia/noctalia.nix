@@ -246,7 +246,7 @@
       };
 
       wallpaper = {
-        enabled = false;
+        enabled = true;
         directory = "${config.home.homeDirectory}/Pictures/";
         fillMode = "crop";
         fillColor = "#000000";
