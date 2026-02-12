@@ -11,15 +11,12 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
-  # PAM for swaylock (used across compositors)
-  security.pam.services.swaylock = {};
-
   # ────────────────────────────── XDG Portals ──────────────────────────────
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk    # fallback/basic portal
       xdg-desktop-portal-gnome  # screencast + secret portal integration
+      xdg-desktop-portal-gtk    # fallback/basic portal
     ];
     config.common.default = "gnome";
   };
@@ -91,8 +88,7 @@
 
     ## Wayland / Hyprland stack
     wayland-protocols 
-    xdg-user-dirs 
-    xorg.xhost
+    xdg-user-dirs
 
     ## Network & Bluetooth applets
     networkmanagerapplet 
