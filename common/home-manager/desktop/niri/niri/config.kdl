@@ -61,9 +61,6 @@ environment {
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d_%H-%M-%S.png"
 
-spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
-spawn-at-startup "polkit-gnome-authentication-agent-1"
-
 // ────────────────────────────── Rules ──────────────────────────────
 window-rule {
     geometry-corner-radius 8
