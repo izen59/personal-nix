@@ -68,7 +68,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id="firefox" title="^Picture-in-Picture$"
+    match app-id="firefox" 
+    title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -82,13 +83,13 @@ window-rule {
 window-rule {
     match app-id="discord"
     open-on-output "HDMI-A-1"
-    open-on-workspace "2"
+    open-on-workspace "3"
 }
 
 window-rule {
-    match app-id="spotify"
+    match app-id="Spotify"
     open-on-output "HDMI-A-1"
-    open-on-workspace "3"
+    open-on-workspace "5"
 }
 
 // ────────────────────────────── Binds ──────────────────────────────
