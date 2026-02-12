@@ -95,6 +95,7 @@
     ## Wayland / Niri stack
     wayland-protocols 
     xdg-user-dirs
+    xwayland-satellite
     polkit_gnome
 
     ## File management / Desktop
