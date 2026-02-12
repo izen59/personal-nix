@@ -78,10 +78,7 @@
     wireplumber 
     networkmanager 
     easyeffects
-    wl-clipboard 
-    wf-recorder
-    mpv 
-    cliphist 
+    mpv
     gnome-settings-daemon
     gsettings-desktop-schemas
     libdbusmenu-gtk3
@@ -89,10 +86,6 @@
     ## Wayland / Hyprland stack
     wayland-protocols 
     xdg-user-dirs
-
-    ## Network & Bluetooth applets
-    networkmanagerapplet 
-    blueman
 
     ## File management / Desktop
     file-roller
