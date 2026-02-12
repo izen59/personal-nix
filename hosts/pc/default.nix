@@ -14,7 +14,7 @@
     ./nix/hardware/system.nix
 
 
-    ../../common/nix/desktop/hyprland/default.nix
+    ../../common/nix/desktop/niri/default.nix
   ];
 
   # Attach PC-specific Home Manager files
