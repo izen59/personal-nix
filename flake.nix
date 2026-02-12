@@ -19,10 +19,10 @@
     };
 
     # ── Noctalia ────────────────────────────────────────────────────────────
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+    #noctalia = {
+    #  url = "github:noctalia-dev/noctalia-shell";
+    #  inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #};
   };
 
   outputs = { self, nixpkgs-unstable, nixpkgs-stable, home-manager, stylix, personal-pkgs-nix, ... }@inputs:
