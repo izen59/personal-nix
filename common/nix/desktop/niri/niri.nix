@@ -83,9 +83,10 @@
     gsettings-desktop-schemas
     libdbusmenu-gtk3
 
-    ## Wayland / Hyprland stack
+    ## Wayland / Niri stack
     wayland-protocols 
     xdg-user-dirs
+    polkit_gnome
 
     ## File management / Desktop
     file-roller
