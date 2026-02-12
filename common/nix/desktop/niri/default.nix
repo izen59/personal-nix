@@ -3,6 +3,7 @@
 {
     imports = [
         ./niri.nix
+        ./dms-shell.nix
         ./login/dms-greeter.nix
     ];
 
