@@ -74,24 +74,21 @@ window-rule {
 
 window-rule {
     match app-id="mpv"
-    open-on-output "DP-3"
-    open-maximized false
-    default-column-width { proportion 1.0; }
-    default-window-height { proportion 0.4; }
-}
-
-window-rule {
-    match app-id="spotify"
-    open-on-output "DP-3"
-    default-column-width { proportion 1.0; }
-    default-window-height { proportion 0.35; }
+    open-on-output "DP-1"
+    match is-focused=false
+    open-maximized true
 }
 
 window-rule {
     match app-id="discord"
-    open-on-output "DP-3"
-    default-column-width { proportion 1.0; }
-    default-window-height { proportion 0.25; }
+    open-on-output "HDMI-A-1"
+    open-on-workspace "2"
+}
+
+window-rule {
+    match app-id="spotify"
+    open-on-output "HDMI-A-1"
+    open-on-workspace "2"
 }
 
 // ────────────────────────────── Binds ──────────────────────────────
