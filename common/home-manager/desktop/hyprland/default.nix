@@ -3,10 +3,8 @@
 {
   imports = [
     ./hyprland.nix
-    #./theme.nix
 
-    # Select noctalia or custom config
-    #./custom/default.nix
+    # Select noctalia
     #./noctalia/default.nix
   ];
 }
