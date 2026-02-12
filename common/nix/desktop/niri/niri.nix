@@ -11,6 +11,15 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  systemd.user.services.gnome-keyring-secrets = {
+    description = "GNOME Keyring (secrets)";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --start --components=secrets";
+      Restart = "on-failure";
+    };
+  };
+
   # ────────────────────────────── XDG Portals ──────────────────────────────
   xdg.portal = {
     enable = true;
@@ -98,6 +107,16 @@
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
+  };
+
+  # Start the polkit agent
+  systemd.user.services.polkit-gnome-agent = {
+    description = "Polkit GNOME Authentication Agent";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      Restart = "on-failure";
+    };
   };
 
   # ────────────────────────────── Fonts ────────────────────────────── 
