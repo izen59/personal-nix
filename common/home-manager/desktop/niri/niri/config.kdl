@@ -216,5 +216,3 @@ binds {
     // Toggle dock
     Mod+Alt+D { spawn "dms" "ipc" "call" "dock" "toggle"; }
 }
-
-}
