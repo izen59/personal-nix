@@ -14,7 +14,7 @@ input {
 
     mouse {
         accel-profile "flat"
-        accel-speed 0.5
+        accel-speed 0.4
     }
 }
 
@@ -46,35 +46,17 @@ animations {
     slowdown 1.0
 }
 
-cursor {
-    xcursor-theme "Bibata-Modern-Classic"
-    xcursor-size 48
-}
-
 // ──────────────────────────── Environment ────────────────────────────
+// Stylix already handles most theming.
+// Keep only the things that matter for Wayland apps behaving correctly.
 environment {
-    XCURSOR_THEME "Bibata-Modern-Classic"
-    QT_CURSOR_THEME "Bibata-Modern-Classic"
-    GTK_CURSOR_THEME "Bibata-Modern-Classic"
-    GTK_THEME "adw-gtk3-dark"
-
     CLUTTER_BACKEND "wayland"
-    QT_QPA_PLATFORMTHEME "qtct"
-
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
+
     XDG_SESSION_TYPE "wayland"
     XDG_CURRENT_DESKTOP "niri"
     XDG_SESSION_DESKTOP "niri"
 }
-
-// ────────────────────────────── Startup ──────────────────────────────
-spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
-spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
-spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
-spawn-at-startup "mako"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "sh" "-c" "sleep 0.5 && swww img $HOME/Pictures/wallpaper.png"
-spawn-at-startup "waybar"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d_%H-%M-%S.png"
@@ -114,43 +96,62 @@ window-rule {
 
 // ────────────────────────────── Binds ──────────────────────────────
 binds {
-    // --- Launchers ---
-    Mod+R { spawn "fuzzel"; }
+    // ───── Launchers ─────
     Mod+T { spawn "kitty"; }
-    Mod+E { spawn "kitty" "-e" "yazi"; }
+    Mod+E { spawn "nautilus"; }
     Mod+W { spawn "firefox"; }
-    Mod+V { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
-    Mod+K { spawn "sh" "-c" "pkill waybar; waybar &"; }
-    Mod+L { spawn "swaylock"; }
+    Mod+O { spawn "obsidian"; }
 
-    // --- System / Power ---
-    Ctrl+Alt+Delete { spawn "wlogout" "-b" "5" "-T" "350" "-B" "350"; }
+    // Spotlight launcher (replaces fuzzel)
+    Mod+R { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+
+    // Control Center
+    Mod+S { spawn "dms" "ipc" "call" "control-center" "toggle"; }
+
+    // Dashboard
+    Mod+Shift+D { spawn "dms" "ipc" "call" "dash" "toggle"; }
+
+    // Settings
+    Mod+Comma { spawn "dms" "ipc" "call" "settings" "toggle"; }
+
+    // Clipboard
+    Mod+V { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
+
+    // Notifications
+    Mod+N { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+
+    // Notepad scratchpad
+    Mod+Shift+N { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+
+    // Lock (DMS)
+    Mod+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+
+    // Power menu
+    Ctrl+Alt+Delete { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
+
+    // ───── Window actions ─────
+    Mod+Q { close-window; }
+    Alt+F4 { close-window; }
+
+    Mod+F { fullscreen-window; }
+    Mod+D { maximize-column; }
+    Mod+Space { toggle-window-floating; }
+
     Mod+Shift+Q { quit; }
 
-    // --- Media / Volume ---
-    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
-    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
-    XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    XF86AudioNext { spawn "playerctl" "next"; }
-    XF86AudioPrev { spawn "playerctl" "previous"; }
-    XF86AudioPlay { spawn "playerctl" "play-pause"; }
-    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+10%"; }
-    XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }
-
-    // --- Focus Navigation ---
+    // ───── Focus navigation ─────
     Mod+Left { focus-column-left; }
     Mod+Right { focus-column-right; }
     Mod+Down { focus-window-down; }
     Mod+Up { focus-window-up; }
 
-    // --- Move windows/columns ---
-    Mod+Ctrl+H { move-column-left; }
-    Mod+Ctrl+L { move-column-right; }
-    Mod+Ctrl+J { move-window-down; }
-    Mod+Ctrl+K { move-window-up; }
+    // ───── Move windows/columns ─────
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Down { move-window-down; }
+    Mod+Shift+Up { move-window-up; }
 
-    // --- Workspaces ---
+    // ───── Workspaces 1..10 ─────
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -159,6 +160,9 @@ binds {
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
     Mod+Ctrl+1 { move-column-to-workspace 1; }
     Mod+Ctrl+2 { move-column-to-workspace 2; }
     Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -167,28 +171,50 @@ binds {
     Mod+Ctrl+6 { move-column-to-workspace 6; }
     Mod+Ctrl+7 { move-column-to-workspace 7; }
     Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Ctrl+0 { move-column-to-workspace 10; }
 
-    // --- Layout control ---
-    Mod+D { maximize-column; }
-    Mod+F { fullscreen-window; }
-    Mod+Space { toggle-window-floating; }
+    // Overview
+    Mod+Tab { toggle-overview; }
 
+    // ───── Resizing ─────
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
+    // Centering
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Tab { toggle-overview; }
+    // ───── Screenshots (use DMS integration for Niri 25.11+) ─────
+    Print { spawn "dms" "ipc" "call" "niri" "screenshot"; }
+    Ctrl+Print { spawn "dms" "ipc" "call" "niri" "screenshotScreen"; }
+    Alt+Print { spawn "dms" "ipc" "call" "niri" "screenshotWindow"; }
 
-    // --- Screenshots (Niri built-in) ---
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    // ───── Media / Volume (DMS OSD) ─────
+    XF86AudioRaiseVolume { spawn "dms" "ipc" "call" "audio" "increment" "5"; }
+    XF86AudioLowerVolume { spawn "dms" "ipc" "call" "audio" "decrement" "5"; }
+    XF86AudioMute { spawn "dms" "ipc" "call" "audio" "mute"; }
+    XF86AudioMicMute { spawn "dms" "ipc" "call" "audio" "micmute"; }
 
-    // --- Close ---
-    Mod+Q { close-window; }
-    Alt+F4 { close-window; }
+    XF86AudioNext { spawn "dms" "ipc" "call" "mpris" "next"; }
+    XF86AudioPrev { spawn "dms" "ipc" "call" "mpris" "previous"; }
+    XF86AudioPlay { spawn "dms" "ipc" "call" "mpris" "playPause"; }
+
+    // Brightness (DMS)
+    XF86MonBrightnessUp { spawn "dms" "ipc" "call" "brightness" "increment" "10"; }
+    XF86MonBrightnessDown { spawn "dms" "ipc" "call" "brightness" "decrement" "10"; }
+
+    // ───── Nice extras ─────
+    // Toggle night mode
+    Mod+Shift+L { spawn "dms" "ipc" "call" "night" "toggle"; }
+
+    // Toggle Do Not Disturb
+    Mod+Shift+M { spawn "dms" "ipc" "call" "notifications" "toggleDoNotDisturb"; }
+
+    // Toggle dock
+    Mod+Alt+D { spawn "dms" "ipc" "call" "dock" "toggle"; }
+}
+
 }
