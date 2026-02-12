@@ -14,6 +14,15 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  systemd.user.services.gnome-keyring-secrets = {
+    description = "GNOME Keyring (secrets)";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --start --components=secrets";
+      Restart = "on-failure";
+    };
+  };
+
   # ────────────────────────────── XDG Portals ──────────────────────────────
   xdg.portal = {
     enable = true;
