@@ -1,22 +1,18 @@
 { config, pkgs, lib, ... }:
 
 {
-  #### Enable greetd (minimal login manager)
   services.greetd = {
     enable = true;
-
     settings = {
-      # Text-based greeter
       default_session = {
-        # tuigreet command line
-        # --remember keeps last user, --asterisks hides password,
-        # --no-xsession-wrapper avoids unnecessary wrapper scripts,
-        # --cmd launches the session (niri-session)
         command = "${pkgs.tuigreet}/bin/tuigreet --remember --asterisks --no-xsession-wrapper --cmd niri-session";
-        user = "greeter"; # special non-privileged user greetd runs under
+        user = "greeter";
       };
     };
   };
+
+  # Add this line to enable gnome-keyring unlock via PAM
+  security.pam.services.greetd.enableGnomeKeyring = true;
 
   #### Make Niri appear as a selectable session in tuigreet
   services.displayManager.sessionPackages = [ pkgs.niri ];
