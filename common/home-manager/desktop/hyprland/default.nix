@@ -7,6 +7,6 @@
 
     # Select noctalia or custom config
     #./custom/default.nix
-    ./noctalia/default.nix
+    #./noctalia/default.nix
   ];
 }
