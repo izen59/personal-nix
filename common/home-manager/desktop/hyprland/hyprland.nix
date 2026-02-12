@@ -25,11 +25,6 @@
       "$filemanager" = "nautilus";
       "$browser" = "firefox";
 
-      exec-once = [
-        "gnome-keyring-daemon --start --components=secrets"  # Fixes keyring popup
-        "systemctl --user start hyprpolkitagent" # Starts polkit agent
-      ];
-
       #### Environment
       env = [
         "CLUTTER_BACKEND,wayland"
