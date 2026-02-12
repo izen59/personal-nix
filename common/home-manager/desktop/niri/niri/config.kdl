@@ -140,8 +140,8 @@ binds {
     Mod+Shift+Q { quit; }
 
     // ───── Focus navigation ─────
-    Mod+Left { focus-column-left; }
-    Mod+Right { focus-column-right; }
+    Mod+WheelUp { focus-column-left; }
+    Mod+WheelDown { focus-column-right; }
     Mod+Down { focus-window-down; }
     Mod+Up { focus-window-up; }
 
