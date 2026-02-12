@@ -89,7 +89,7 @@
     ## Wayland / Hyprland stack
     wayland-protocols 
     xdg-user-dirs 
-    #hyprpolkitagent # stuff like restoring images with gnome disks doesnt work without this, but dms has its own built in.
+    hyprpolkitagent # stuff like restoring images with gnome disks doesnt work without this, dms has its own but i think the quickshell version is too old.
 
     ## File management / Desktop
     gnome-disk-utility
