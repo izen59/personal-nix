@@ -141,7 +141,7 @@ binds {
 
     // ───── Focus navigation ─────
     Mod+WheelScrollUp { focus-column-left; }
-    MMod+WheelScrollDown { focus-column-right; }
+    Mod+WheelScrollDown { focus-column-right; }
 
     // ───── Move windows/columns ─────
     Mod+Shift+Left { move-column-left; }
