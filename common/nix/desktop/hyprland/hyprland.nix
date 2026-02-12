@@ -14,9 +14,6 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
-  # PAM for swaylock (used across compositors)
-  security.pam.services.swaylock = {};
-
   # ────────────────────────────── XDG Portals ──────────────────────────────
   xdg.portal = {
     enable = true;
@@ -84,11 +81,7 @@
     wireplumber 
     networkmanager 
     easyeffects
-    wl-clipboard 
-    wf-recorder 
     mpv 
-    cliphist 
-    ydotool 
     gnome-settings-daemon
     libdbusmenu-gtk3
     nwg-look
@@ -96,12 +89,7 @@
     ## Wayland / Hyprland stack
     wayland-protocols 
     xdg-user-dirs 
-    xorg.xhost
-    hyprpolkitagent # stuff like restoring images with gnome disks doesnt work without this, its mandatory.
-
-    ## Network & Bluetooth applets
-    networkmanagerapplet 
-    blueman
+    #hyprpolkitagent # stuff like restoring images with gnome disks doesnt work without this, but dms has its own built in.
 
     ## File management / Desktop
     gnome-disk-utility
