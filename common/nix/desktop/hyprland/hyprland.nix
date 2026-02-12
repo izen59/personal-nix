@@ -112,6 +112,16 @@
     terminal = "kitty";
   };
 
+  # Start polkit agent
+  systemd.user.services.hyprpolkitagent = {
+    description = "Hyprland Polkit Authentication Agent";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.hyprpolkitagent}/bin/hyprpolkitagent";
+      Restart = "on-failure";
+    };
+  };
+
   # ────────────────────────────── Fonts ────────────────────────────── 
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
