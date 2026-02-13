@@ -1,3 +1,5 @@
+// THIS ENTIRE THING SHOULD PROBABLY BE HOST BASED BUT YEAH
+
 // ────────────────────────────── Input ──────────────────────────────
 input {
     keyboard {
@@ -15,6 +17,34 @@ input {
     mouse {
         accel-profile "flat"
         accel-speed 0.4
+    }
+}
+
+
+// ────────────────────────────── Monitors ──────────────────────────────────────────
+
+output "HDMI-A-1" {
+    mode "1920x1080@180"
+    scale 2.0
+    transform "90"
+    position x=0 y=0
+    focus-at-startup
+    backdrop-color "#001100"
+
+    hot-corners {
+        top-left
+    }
+}
+
+output "DP-1" {
+    mode "1920x1080@75"
+    scale 2.0
+    transform "90"
+    position x=540 y=0
+    backdrop-color "#001100"
+
+    hot-corners {
+        top-right
     }
 }
 
