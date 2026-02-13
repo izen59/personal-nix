@@ -25,7 +25,7 @@ input {
 
 output "HDMI-A-1" {
     mode "1920x1080@180"
-    scale 2.0
+    scale 1.0
     position x=0 y=0
     focus-at-startup
     backdrop-color "#001100"
@@ -37,7 +37,7 @@ output "HDMI-A-1" {
 
 output "DP-1" {
     mode "1920x1080@75"
-    scale 2.0
+    scale 1.0
     position x=540 y=0
     backdrop-color "#001100"
 
