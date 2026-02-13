@@ -232,6 +232,8 @@ binds {
     XF86MonBrightnessDown { spawn "dms" "ipc" "call" "brightness" "decrement" "10"; }
 
     // ───── Nice extras ─────
+    // Mute mic
+    Mod+F8 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     // Toggle night mode
     Mod+Shift+L { spawn "dms" "ipc" "call" "night" "toggle"; }
 
