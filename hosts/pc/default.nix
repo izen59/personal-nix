@@ -12,9 +12,6 @@
     ./nix/hardware/mounts.nix
     ./nix/hardware/network.nix
     ./nix/hardware/system.nix
-
-
-    ../../common/nix/desktop/niri/default.nix
   ];
 
   # Attach PC-specific Home Manager files
