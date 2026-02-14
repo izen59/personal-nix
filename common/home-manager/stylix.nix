@@ -7,6 +7,8 @@
 
   stylix = {
     enable = true;
+    # Enable most targets automatically
+    autoEnable = true;
 
     # Disable this werid x11 shit that caused building errors.
     targets.xresources = {
@@ -14,9 +16,6 @@
       colors.enable = false;
       fonts.enable = false;
     };
-
-    # Enable most targets automatically
-    autoEnable = true;
 
     # Force dark mode
     polarity = "dark";
