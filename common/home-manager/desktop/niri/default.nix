@@ -3,5 +3,6 @@
 {
   imports = [
     ./niri/niri.nix
+    ./stylix.nix
   ];
 }
