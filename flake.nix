@@ -43,7 +43,7 @@
             home-manager.useUserPackages = true;
           }
 
-          stylix.nixosModules.stylix
+          #stylix.nixosModules.stylix
         ];
       };
   in
