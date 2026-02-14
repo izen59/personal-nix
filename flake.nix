@@ -24,7 +24,7 @@
       };
     };
 
-    mkHost = { hostname, nixpkgs, user }:
+    mkHost = { hostname, nixpkgs, user, desktop }:
       nixpkgs.lib.nixosSystem {
         inherit system;
 
