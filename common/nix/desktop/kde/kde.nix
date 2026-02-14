@@ -3,6 +3,7 @@
 {
   # Plasma 6
   services.desktopManager.plasma6.enable = true;
+  programs.xwayland.enable = true;
 
   # Useful KDE config module (System Settings -> Login Screen etc.)
   environment.systemPackages = with pkgs; [
