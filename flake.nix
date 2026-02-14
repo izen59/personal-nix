@@ -1,136 +1,72 @@
 {
-  description = "Personal NixOS configs for Desktop + Toshiba laptop";
+  description = "Personal NixOS configs";
 
   inputs = {
-    # ── Nixpkgs ─────────────────────────────────────────────────────────────
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url   = "github:nixos/nixpkgs/nixos-25.11";
 
-    # ── Personal Packages ───────────────────────────────────────────────────
     personal-pkgs-nix.url = "github:izen67/personal-pkgs-nix";
 
-    # ── Home Manager ────────────────────────────────────────────────────────
     home-manager.url = "github:nix-community/home-manager";
 
-    # ── Stylix ──────────────────────────────────────────────────────────────
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
-    # ── Noctalia ────────────────────────────────────────────────────────────
-    #noctalia = {
-    #  url = "github:noctalia-dev/noctalia-shell";
-    #  inputs.nixpkgs.follows = "nixpkgs-unstable";
-    #};
+    stylix.url = "github:nix-community/stylix";
   };
 
-  outputs = { self, nixpkgs-unstable, nixpkgs-stable, home-manager, stylix, personal-pkgs-nix, ... }@inputs:
+  outputs = { self, nixpkgs-stable, nixpkgs-unstable, home-manager, stylix, personal-pkgs-nix, ... }@inputs:
   let
+    system = "x86_64-linux";
+
     globalOverlays = personal-pkgs-nix.overlays.x86_64-linux;
-  in {
+
+    mkHost = { hostname, nixpkgs, user }:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        specialArgs = {
+          inherit inputs personal-pkgs-nix user;
+        };
+
+        modules = [
+          ./common/default.nix
+          ./hosts/${hostname}/default.nix
+
+          { nixpkgs.overlays = globalOverlays; }
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+
+          stylix.nixosModules.stylix
+        ];
+      };
+  in
+  {
     nixosConfigurations = {
-
-      # ──────────────────────────────── Main PC ────────────────────────────────
-      pc = nixpkgs-unstable.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs personal-pkgs-nix;
-          user = "pc";
-        };
-        modules = [
-          ./common/default.nix
-          ./hosts/pc/default.nix
-
-          { nixpkgs.overlays = globalOverlays; }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = false;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              nixpkgs = nixpkgs-unstable;
-            };
-          }
-        ];
+      pc = mkHost {
+        hostname = "pc";
+        nixpkgs = nixpkgs-stable;
+        user = "pc";
       };
 
-      # ──────────────────────────────── Gaming PC ────────────────────────────────
-      gaming = nixpkgs-unstable.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs personal-pkgs-nix;
-          user = "gaming";
-        };
-        modules = [
-          ./common/default.nix
-          ./hosts/gaming/default.nix
-
-          { nixpkgs.overlays = globalOverlays; }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = false;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              nixpkgs = nixpkgs-unstable;
-            };
-          }
-        ];
+      toshiba = mkHost {
+        hostname = "toshiba";
+        nixpkgs = nixpkgs-stable;
+        user = "toshiba";
       };
 
-      # ──────────────────────────────── TOSHIBA ─────────────────────────────
-      toshiba = nixpkgs-stable.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs personal-pkgs-nix;
-          user = "toshiba";
-        };
-        modules = [
-          ./common/default.nix
-          ./hosts/toshiba/default.nix
-
-          { nixpkgs.overlays = globalOverlays; }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = false;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              nixpkgs = nixpkgs-stable;
-            };
-          }
-        ];
+      hp = mkHost {
+        hostname = "hp";
+        nixpkgs = nixpkgs-stable;
+        user = "hp";
       };
 
-      # ──────────────────────────────── HP ────────────────────────────────
-      hp = nixpkgs-stable.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs personal-pkgs-nix;
-          user = "hp";
-        };
-        modules = [
-          ./common/default.nix
-          ./hosts/hp/default.nix
-
-          { nixpkgs.overlays = globalOverlays; }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = false;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              nixpkgs = nixpkgs-stable;
-            };
-          }
-        ];
+      gaming = mkHost {
+        hostname = "gaming";
+        nixpkgs = nixpkgs-unstable;
+        user = "gaming";
       };
-
     };
   };
 }
