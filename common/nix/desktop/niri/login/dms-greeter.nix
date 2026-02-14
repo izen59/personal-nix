@@ -9,7 +9,7 @@
     };
 
     #### copy your DMS config into the greeter cache so the greeter has your wallpaper/theme/session settings.
-    configHome = "/home/${user}";
+    configHome = "/home/pc";
     
     #### Logs are extremely useful for debugging early boot issues
     logs = {
