@@ -33,6 +33,7 @@
     wireplumber
     networkmanager
     easyeffects
+    xorg.xrdb
 
     ## File management / GUI tools
     nemo-with-extensions
