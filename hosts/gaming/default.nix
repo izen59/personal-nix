@@ -13,9 +13,6 @@
     ./nix/hardware/mounts.nix
     ./nix/hardware/network.nix
     ./nix/hardware/system.nix
-
-
-    ../../common/nix/desktop/hyprland/default.nix
   ];
 
   # Attach PC-specific Home Manager files
