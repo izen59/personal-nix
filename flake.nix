@@ -19,6 +19,9 @@
     mkPkgs = nixpkgs: import nixpkgs {
       inherit system;
       overlays = globalOverlays;
+      config = {
+        allowUnfree = true;
+      };
     };
 
     mkHost = { hostname, nixpkgs, user }:
