@@ -8,7 +8,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wineWowPackages.unstableFull
+    wineWow64Packages.unstable
     winetricks
     mangohud
     goverlay
