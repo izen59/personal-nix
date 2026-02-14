@@ -38,6 +38,9 @@
           ./common/default.nix
           ./hosts/${hostname}/default.nix
 
+          # Desktop chosen here:
+          ./common/nix/desktop/${desktop}/default.nix
+
           home-manager.nixosModules.home-manager
           {
             home-manager.useUserPackages = true;
@@ -53,24 +56,28 @@
         hostname = "pc";
         nixpkgs = nixpkgs-unstable;
         user = "pc";
+        desktop = "niri";
       };
 
       toshiba = mkHost {
         hostname = "toshiba";
         nixpkgs = nixpkgs-stable;
         user = "toshiba";
+        desktop = "gnome";
       };
 
       hp = mkHost {
         hostname = "hp";
         nixpkgs = nixpkgs-stable;
         user = "hp";
+        desktop = "gnome";
       };
 
       gaming = mkHost {
         hostname = "gaming";
         nixpkgs = nixpkgs-unstable;
         user = "gaming";
+        desktop = "niri";
       };
     };
   };
