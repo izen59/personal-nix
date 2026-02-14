@@ -46,7 +46,7 @@
     nixosConfigurations = {
       pc = mkHost {
         hostname = "pc";
-        nixpkgs = nixpkgs-stable;
+        nixpkgs = nixpkgs-unstable;
         user = "pc";
       };
 
