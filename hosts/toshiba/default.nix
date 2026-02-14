@@ -9,9 +9,6 @@
 
     ./nix/hardware/network.nix
     ./nix/hardware/system.nix
-
-
-     ../../common/nix/desktop/gnome/default.nix
   ];
 
   # Attach PC-specific Home Manager files
