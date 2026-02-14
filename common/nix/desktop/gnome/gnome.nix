@@ -14,6 +14,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.vitals
+    gnomeExtensions.dash2dock-lite
   ];
 
   # Optional: strip GNOME default apps
