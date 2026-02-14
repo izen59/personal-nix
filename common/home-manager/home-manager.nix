@@ -10,6 +10,6 @@
 
   imports = [
     ./software/default.nix
-    #./stylix.nix
+    ./stylix.nix
   ];
 }
