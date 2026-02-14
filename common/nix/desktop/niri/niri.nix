@@ -120,22 +120,6 @@
     };
   };
 
-  # ────────────────────────────── Fonts ────────────────────────────── 
-  fonts.fontconfig.enable = true;
-  fonts.enableDefaultPackages = true;
-  fonts.packages = with pkgs; [
-    material-symbols 
-    rubik
-    nerd-fonts.jetbrains-mono 
-    nerd-fonts.ubuntu 
-    nerd-fonts.ubuntu-mono
-    nerd-fonts.caskaydia-cove 
-    nerd-fonts.fantasque-sans-mono
-    nerd-fonts.mononoki 
-    nerd-fonts.space-mono
-    maple-mono.Normal-NF
-  ];
-
   # ────────────────────────────── File Management Services ──────────────────────────────
   services.gvfs.enable = true;
   services.udisks2.enable = true;
