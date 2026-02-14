@@ -8,19 +8,24 @@
     personal-pkgs-nix.url = "github:izen67/personal-pkgs-nix";
 
     home-manager.url = "github:nix-community/home-manager";
-
     stylix.url = "github:nix-community/stylix";
   };
 
   outputs = { self, nixpkgs-stable, nixpkgs-unstable, home-manager, stylix, personal-pkgs-nix, ... }@inputs:
   let
     system = "x86_64-linux";
-
     globalOverlays = personal-pkgs-nix.overlays.x86_64-linux;
+
+    mkPkgs = nixpkgs: import nixpkgs {
+      inherit system;
+      overlays = globalOverlays;
+    };
 
     mkHost = { hostname, nixpkgs, user }:
       nixpkgs.lib.nixosSystem {
         inherit system;
+
+        pkgs = mkPkgs nixpkgs;
 
         specialArgs = {
           inherit inputs personal-pkgs-nix user;
@@ -29,8 +34,6 @@
         modules = [
           ./common/default.nix
           ./hosts/${hostname}/default.nix
-
-          { nixpkgs.overlays = globalOverlays; }
 
           home-manager.nixosModules.home-manager
           {
