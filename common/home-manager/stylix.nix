@@ -8,6 +8,9 @@
   stylix = {
     enable = true;
 
+    # Disable this werid x11 shit that caused building errors.
+    targets.xresources.enable = false;
+
     # Enable most targets automatically
     autoEnable = true;
 
@@ -72,7 +75,6 @@
     };
 
     # Per app settings:
-
     targets.firefox = {
       profileNames = [ "mainprofile" ];
       fonts.enable = false;
