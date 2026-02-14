@@ -117,7 +117,7 @@ window-rule {
 window-rule {
     match app-id="Spotify"
     open-on-output "HDMI-A-1"
-    open-on-workspace "5"
+    open-on-workspace "3"
     open-maximized true
 }
 
