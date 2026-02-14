@@ -5,10 +5,8 @@
     inputs.stylix.homeModules.stylix
   ];
 
-  home.packages = with pkgs; [
-    xorg.xrdb
-    xrdb
-  ];
+  xresources.properties = null;
+  xresources.extraConfig = "";
 
   stylix = {
     enable = true;
