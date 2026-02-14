@@ -2,8 +2,8 @@
 
 {
   # ────────────────────────────── KDE Plasma Core ──────────────────────────────
-  # Wayland is the default. No need to enable X11.
   services.desktopManager.plasma6.enable = true;
+  programs.xwayland.enable = true;
 
   # Authentication
   security.polkit.enable = true;
