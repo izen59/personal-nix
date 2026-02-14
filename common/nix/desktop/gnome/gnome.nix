@@ -3,6 +3,7 @@
 {
   # ────────────────────────────── GNOME Core ──────────────────────────────
   services.desktopManager.gnome.enable = true;
+  programs.xwayland.enable = true;
 
   # Authentication
   security.polkit.enable = true;
