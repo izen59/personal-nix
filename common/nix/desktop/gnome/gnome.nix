@@ -19,8 +19,8 @@
 
   # Optional: strip GNOME default apps
   # services.gnome.core-apps.enable = false;
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    pkgs.epiphany    # web browser
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany    # web browser
     geary       # email client
     yelp        # help viewer
     gnome-maps
