@@ -5,21 +5,11 @@
     inputs.stylix.homeModules.stylix
   ];
 
-  xresources.properties = null;
-  xresources.extraConfig = "";
-
   stylix = {
     enable = true;
 
     # Enable most targets automatically
     autoEnable = true;
-
-    # Disable this werid x11 shit that caused building errors.
-    targets.xresources = {
-      enable = false;
-      colors.enable = false;
-      fonts.enable = false;
-    };
 
     # Force dark mode
     polarity = "dark";
