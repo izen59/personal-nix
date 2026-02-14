@@ -1,32 +1,15 @@
 { config, pkgs, lib, user, ... }:
 
 {
-  # ────────────────────────────── KDE Plasma Core ──────────────────────────────
+  # Plasma 6
   services.desktopManager.plasma6.enable = true;
-  programs.xwayland.enable = true;
 
-  # Authentication
-  security.polkit.enable = true;
-
-  # ────────────────────────────── MIME Defaults ──────────────────────────────
-  xdg.mime = {
-    enable = true;
-
-    defaultApplications = {
-
-    };
-  };
-
-  # ────────────────────────────── System Packages ──────────────────────────────
+  # Useful KDE config module (System Settings -> Login Screen etc.)
   environment.systemPackages = with pkgs; [
     kdePackages.sddm-kcm
   ];
 
-  # ────────────────────────────── File Management Services ──────────────────────────────
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-
-  # ────────────────────────────── KDE Globals (Terminal preference) ─────────────────────
+  # Custom terminal preference
   environment.etc."xdg/kdeglobals".text = ''
     [General]
     TerminalApplication=kitty
