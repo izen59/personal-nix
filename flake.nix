@@ -52,11 +52,12 @@
   in
   {
     nixosConfigurations = {
+    # Niri and Hyprland should be only on unstable due to DMS only being available on unstable.
       pc = mkHost {
         hostname = "pc";
-        nixpkgs = nixpkgs-unstable;
+        nixpkgs = nixpkgs-stable;
         user = "pc";
-        desktop = "niri";
+        desktop = "gnome";
       };
 
       toshiba = mkHost {
