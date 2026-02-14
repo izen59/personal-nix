@@ -14,36 +14,11 @@
     enable = true;
 
     defaultApplications = {
-      "inode/directory" = [ "nemo.desktop" ];
-      "x-directory/normal" = [ "nemo.desktop" ];
     };
   };
 
   # ────────────────────────────── System Packages ──────────────────────────────
   environment.systemPackages = with pkgs; [
-    ## Core tools you like
-    axel
-    bc
-    ripgrep
-    libqalculate
-    libnotify
-    playerctl
-    brightnessctl
-    ddcutil
-    wireplumber
-    networkmanager
-    easyeffects
-
-    ## File management / GUI tools
-    nemo-with-extensions
-    gnome-disk-utility
-    gnome-system-monitor
-
-    ## Theming
-    adw-gtk3
-    bibata-cursors
-    papirus-icon-theme
-
     ## GNOME Stuff
     gnome-tweaks
     gnome-browser-connector
@@ -53,23 +28,6 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.vitals
-  ];
-
-  # ────────────────────────────── Fonts ──────────────────────────────
-  fonts.fontconfig.enable = true;
-  fonts.enableDefaultPackages = true;
-
-  fonts.packages = with pkgs; [
-    material-symbols
-    rubik
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.ubuntu
-    nerd-fonts.ubuntu-mono
-    nerd-fonts.caskaydia-cove
-    nerd-fonts.fantasque-sans-mono
-    nerd-fonts.mononoki
-    nerd-fonts.space-mono
-    maple-mono.Normal-NF
   ];
 
   # ────────────────────────────── File Management Services ──────────────────────────────
