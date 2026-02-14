@@ -40,7 +40,7 @@
 
           home-manager.nixosModules.home-manager
           {
-            home-manager.useUserPackages = true;
+            #home-manager.useUserPackages = true;
           }
 
           stylix.nixosModules.stylix
