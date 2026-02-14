@@ -9,7 +9,7 @@
     enable = true;
 
     # Disable this werid x11 shit that caused building errors.
-    stylix.targets.xresources = {
+    targets.xresources = {
       enable = false;
       colors.enable = false;
       fonts.enable = false;
