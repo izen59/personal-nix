@@ -46,6 +46,13 @@
     ffmpeg-full
   ];
 
+  fonts = {
+    fontconfig.enable = true;
+    packages = with pkgs; [
+      font-awesome
+    ];
+  };
+
   # Terminal defaults
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
