@@ -15,6 +15,8 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.vitals
     gnomeExtensions.dash2dock-lite
+    gnomeExtensions.window-is-ready-remover
+    gnomeExtensions.media-controls
   ];
 
   # Optional: strip GNOME default apps
