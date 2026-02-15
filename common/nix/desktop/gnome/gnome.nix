@@ -2,7 +2,6 @@
 
 {
   services.desktopManager.gnome.enable = true;
-  programs.xwayland.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
