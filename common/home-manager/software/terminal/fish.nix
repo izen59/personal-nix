@@ -2,7 +2,7 @@
 
 {
   programs.fish = {
-    enable = false;
+    enable = true;
 
     # ── shell initialization ──
     interactiveShellInit = ''
