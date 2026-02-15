@@ -36,8 +36,6 @@
     eza
     lm_sensors
     exiftool
-    kitty
-    starship
     glib
     mpv
     vlc
@@ -49,19 +47,5 @@
   ];
 
   # Terminal defaults
-  programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
-  xdg.terminal-exec = {
-    enable = true;
-    package = pkgs.kitty; # needed here aswell as a system package
-  };
-
-  # Proper font installation (used by Waybar, GTK, etc.)
-  fonts = {
-    fontconfig.enable = true;
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      font-awesome
-    ];
-  };
 }
