@@ -14,7 +14,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.vitals
-    gnomeExtensions.dash2dock-lite
+    gnomeExtensions.dash-to-dock
     gnomeExtensions.window-is-ready-remover
     gnomeExtensions.media-controls
   ];
