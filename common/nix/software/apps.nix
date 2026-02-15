@@ -26,6 +26,7 @@
 
     # System & CLI Utilities
     git
+    ripgrep
     iw
     tree
     jq
