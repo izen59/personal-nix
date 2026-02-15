@@ -23,4 +23,5 @@
       ExecStart = "${pkgs.coreutils}/bin/cp -f /home/${user}/.config/monitors.xml /etc/xdg/monitors.xml";
       ExecStartPost = "${pkgs.coreutils}/bin/chmod 0644 /etc/xdg/monitors.xml";
     };
+  };
 }
