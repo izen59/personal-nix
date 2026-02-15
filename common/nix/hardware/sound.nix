@@ -30,6 +30,12 @@
           "resample.quality" = 4;               # Balanced quality/performance
         };
       };
+
+      pipewire-pulse."10-no-flat-volumes" = {
+        "pulse.properties" = {
+          "flat-volumes" = false;
+        };
+      };
     };
   };
 
