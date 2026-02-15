@@ -50,6 +50,7 @@
     fontconfig.enable = true;
     packages = with pkgs; [
       font-awesome
+      nerd-fonts.jetbrains-mono
     ];
   };
 
