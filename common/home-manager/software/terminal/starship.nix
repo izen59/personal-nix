@@ -7,7 +7,7 @@
     settings = {
       add_newline = false;
 
-      format = "$time$cmd_duration$username[ ](fg:accent bg:surface2)$directory[ ](fg:surface2 bg:surface3)$git_branch$git_status[ ](fg:surface3)$character";
+      format = "$time$cmd_duration$username[](fg:accent bg:surface2)$directory[](fg:surface2 bg:surface3)$git_branch$git_status[](fg:surface3)$character";
 
       time = {
         disabled = false;
