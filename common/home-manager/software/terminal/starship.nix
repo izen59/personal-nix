@@ -12,12 +12,12 @@
       time = {
         disabled = false;
         time_format = "%R";
-        format = "[ 󱑍 $time ](fg:accent bg:surface)";
+        format = "[ $time ](fg:accent bg:surface)";
       };
 
       cmd_duration = {
         min_time = 3000;
-        format = "[󱑎 $duration ](fg:accent bg:surface)";
+        format = "[ $duration ](fg:accent bg:surface)";
       };
 
       username = {
@@ -31,7 +31,7 @@
       };
 
       git_branch = {
-        format = "[   $branch(:$remote_branch) ](fg:text bg:surface3)";
+        format = "[ $branch(:$remote_branch) ](fg:text bg:surface3)";
       };
 
       git_status = {
