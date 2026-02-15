@@ -2,8 +2,7 @@
 
 {
   programs.kitty = {
-    enable = true;
-    package = null;                       # use system-level kitty binary
+    enable = false;
     enableGitIntegration = false;         # optional
     shellIntegration.enableFishIntegration = true;
 
