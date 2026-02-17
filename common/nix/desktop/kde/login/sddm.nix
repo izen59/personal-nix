@@ -5,6 +5,7 @@
     enable = true;
     wayland = {
       enable = true;
+      compositor = "kwin";
     };
     autoNumlock = true;
     #enableHidpi = true;
