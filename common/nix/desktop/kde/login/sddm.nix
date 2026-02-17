@@ -9,7 +9,6 @@
     };
     theme = "breeze";
     autoNumlock = true;
-    #enableHidpi = true;
   };
 
   environment.systemPackages = [
@@ -19,7 +18,7 @@
     '')
   ];
 
-  # Sets monitor config to be the same as desktop
+  # Sets monitor config to be the same as desktop (this doesnt work, some immutability/sddm stuff is happening and it just ignores the monitor config)
   systemd.services.sddm-plasma-config = {
     description = "Sync Plasma display/input config to SDDM";
     wantedBy = [ "display-manager.service" ];
