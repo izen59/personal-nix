@@ -8,5 +8,5 @@
     };
     autoNumlock = true;
     #enableHidpi = true;
-  }
+  };
 }
