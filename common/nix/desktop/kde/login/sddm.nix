@@ -7,9 +7,17 @@
       enable = true;
       compositor = "kwin";
     };
+    theme = "breeze";
     autoNumlock = true;
     #enableHidpi = true;
   };
+
+  environment.systemPackages = [
+    (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+      [General]
+      background=${../../../../../assets/wallpaper5.png}
+    '')
+  ];
 
   # Sets monitor config to be the same as desktop
   systemd.services.sddm-plasma-config = {
