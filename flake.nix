@@ -57,7 +57,7 @@
         hostname = "pc";
         nixpkgs = nixpkgs-stable;
         user = "pc";
-        desktop = "gnome";
+        desktop = "kde";
       };
 
       toshiba = mkHost {
