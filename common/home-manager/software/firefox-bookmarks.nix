@@ -20,8 +20,7 @@
               { name = "ZM"; url = "http://zoneminder:8095/"; }
               { name = "AdGuard"; url = "http://adguard:3000/"; }
               { name = "Traefik Stats"; url = "http://traefik:7890/"; }
-              { name = "Grafana"; url = "http://grafana:3000/"; }
-              { name = "OMV"; url = "http://openmediavault/"; }
+              { name = "OMV"; url = "http://192.168.50.101/"; }
               { name = "qBittorrent"; url = "http://arr:8080/"; }
               { name = "Jellyseerr"; url = "http://arr:5055/"; }
               { name = "Sonarr"; url = "http://arr:8989/"; }
