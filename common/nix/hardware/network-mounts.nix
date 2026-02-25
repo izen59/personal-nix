@@ -35,26 +35,6 @@ fileSystems."/mnt/nas-storage" = {
   ];
 };
 
-fileSystems."/mnt/nas-audiobookshelf" = {
-  device = "192.168.50.101:/AUDIOBOOKSHELF";
-  fsType = "nfs";
-  options = [
-    "_netdev"
-    "noatime"
-    "x-systemd.automount"
-  ];
-};
-
-fileSystems."/mnt/nas-komga" = {
-  device = "192.168.50.101:/KOMGA";
-  fsType = "nfs";
-  options = [
-    "_netdev"
-    "noatime"
-    "x-systemd.automount"
-  ];
-};
-
 fileSystems."/mnt/nas-torrent" = {
   device = "192.168.50.101:/TORRENT";
   fsType = "nfs";
