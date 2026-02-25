@@ -35,7 +35,7 @@ fileSystems."/mnt/samba-storage" = {
 };
 
 fileSystems."/mnt/samba-torrent" = {
-  device = //192.168.50.102/TORRENT";
+  device = "//192.168.50.102/TORRENT";
   fsType = "cifs";
   options = [
     "_netdev"
