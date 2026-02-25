@@ -14,7 +14,7 @@
 
 fileSystems."/mnt/samba-media" = {
   device = "//192.168.50.102/MEDIA";
-  fsType = "nfs";
+  fsType = "cifs";
   options = [
     "_netdev"
     "noatime"
@@ -25,7 +25,7 @@ fileSystems."/mnt/samba-media" = {
 
 fileSystems."/mnt/samba-storage" = {
   device = "//192.168.50.102/STORAGE";
-  fsType = "nfs";
+  fsType = "cifs";
   options = [
     "_netdev"
     "noatime"
@@ -36,7 +36,7 @@ fileSystems."/mnt/samba-storage" = {
 
 fileSystems."/mnt/samba-torrent" = {
   device = //192.168.50.102/TORRENT";
-  fsType = "nfs";
+  fsType = "cifs";
   options = [
     "_netdev"
     "noatime"
