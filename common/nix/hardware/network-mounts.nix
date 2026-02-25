@@ -5,43 +5,43 @@
     device = "//192.168.50.102/zoneminder";
     fsType = "cifs";
     options = [
-      "username=sambazm"
-      "password=sambazm"
-      "uid=1000"
-      "gid=100"
+      "_netdev"
       "noatime"
       "x-systemd.automount"
       "x-systemd.idle-timeout=60"
     ];
   };
 
-fileSystems."/mnt/nas-media" = {
-  device = "192.168.50.101:/MEDIA";
+fileSystems."/mnt/samba-media" = {
+  device = "//192.168.50.102/MEDIA";
   fsType = "nfs";
   options = [
     "_netdev"
     "noatime"
     "x-systemd.automount"
+    "x-systemd.idle-timeout=60"
   ];
 };
 
-fileSystems."/mnt/nas-storage" = {
-  device = "192.168.50.101:/STORAGE";
+fileSystems."/mnt/samba-storage" = {
+  device = "//192.168.50.102/STORAGE";
   fsType = "nfs";
   options = [
     "_netdev"
     "noatime"
     "x-systemd.automount"
+    "x-systemd.idle-timeout=60"
   ];
 };
 
-fileSystems."/mnt/nas-torrent" = {
-  device = "192.168.50.101:/TORRENT";
+fileSystems."/mnt/samba-torrent" = {
+  device = //192.168.50.102/TORRENT";
   fsType = "nfs";
   options = [
     "_netdev"
     "noatime"
     "x-systemd.automount"
+    "x-systemd.idle-timeout=60"
   ];
 };
 
