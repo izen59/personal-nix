@@ -2,7 +2,7 @@
 
 {
   #SET CAMERA ON STARTUP
-  home.file.".config/autostart/mpv-stream.desktop".source = ../../../assets/mpv-stream.desktop;
+  #home.file.".config/autostart/mpv-stream.desktop".source = ../../../assets/mpv-stream.desktop;
   #home.file.".config/autostart/mpv-stream.desktop".force = true;
   
   #SET WINDOW SIZES AND POSITIONS
